@@ -2,7 +2,7 @@ config:
     name: login_testcases
     base_url: ${ENV(base_url)}
     variables:
-        phone: ${ENV(pfphone)}
+        phone: ${ENV(ckphone)}
 
 teststeps:
 -   name: /v1/auth/1_login_api

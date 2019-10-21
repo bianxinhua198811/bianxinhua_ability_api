@@ -7,24 +7,19 @@ config:
 
 teststeps:
 
--   name: 提问人员A登录系统
-    variables:
-        phone: ${ENV(twphone)}
-    testcase: testcases/tw_login_testcases.yml
+-   name: 18100000004提出问题
+    testcase: testcases/question/add_question.yml
 
--   name: A发布提问
-    api: api/firstpage_api/addquestion_api.yml
-
--   name: 有评分权限B登录系统
+-   name: 有评分权限18200000005登录系统
     variables:
         currtime: ${make_time()}
         uuid: ${make_uuid()}
         access_token: ''
         sign: ${make_sign($currtime, $uuid,$access_token)}
         phone: ${ENV(pfphone)}
-    testcase: testcases/pf_login_testcases.yml
+    testcase: testcases/login_testcases.yml
 
--   name: B查看待我审核
+-   name: 18200000005查看待我审核
     output:
         qid: qid
     api: api/question_api/audits_api.yml
@@ -35,19 +30,19 @@ teststeps:
               - content.data.questions.0.id
               - $qid
 
--   name: B审核问题
+-   name: 18200000005审核问题
     api: api/question_api/auditquestion_api.yml
 
--   name: 无评分权限C登录系统
+-   name: 无评分权限18200000004登录系统
     variables:
         currtime: ${make_time()}
         uuid: ${make_uuid()}
         access_token: ''
         sign: ${make_sign($currtime, $uuid,$access_token)}
         phone: ${ENV(ckphone)}
-    testcase: testcases/ck_login_testcases.yml
+    testcase: testcases/login_testcases.yml
 
--   name: 无评分权限C查看问题详情
+-   name: 无评分权限18200000004查看问题详情
     api: api/question_api/questiondetail_api.yml
     validate:
         - eq:

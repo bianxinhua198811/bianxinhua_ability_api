@@ -1,5 +1,5 @@
 config:
-    name: 发布提问
+    name: 18100000004发布提问
 #    #清理数据
 #    teardown_hooks:
 #        - ${teardown_hook_clean_db()}
@@ -7,11 +7,13 @@ config:
 
 teststeps:
 
--   name: 提问人员A登录系统
+-   name: 提问人员18100000004登录系统
     variables:
         phone: ${ENV(twphone)}
-    testcase: testcases/tw_login_testcases.yml
+    testcase: testcases/login_testcases.yml
 
--   name: A发布提问
+-   name: 18100000004发布提问
+    variables:
+        relatedDepsid: 163
     api: api/firstpage_api/addquestion_api.yml
 
