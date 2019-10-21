@@ -1,0 +1,35 @@
+config:
+    name: 无评分权限人员-查看方案-权限校验1
+
+teststeps:
+
+-   name: 评分权限人员18200000005查看问题-审核问题
+    output:
+        qid: qid
+    testcase: testcases/permission/ques_pf_permission/pf_permission.yml
+    extract:
+        qid: content.data.questions.0.id
+
+-   name: 评分权限人员18200000005我来分析
+    api: api/question_api/solution_api.yml
+    extract:
+        sid: content.data.solution.id
+
+-   name: 无评分权限18200000004登录系统
+    variables:
+        currtime: ${make_time()}
+        uuid: ${make_uuid()}
+        access_token: ''
+        sign: ${make_sign($currtime, $uuid,$access_token)}
+        phone: ${ENV(ckphone)}
+    testcase: testcases/login_testcases.yml
+
+-   name: 无评分权限人员18200000004查看方案权限
+    api: api/question_api/solutiondetails_api.yml
+    validate:
+        - eq:
+              - content.data.solution.permission
+              - 1
+
+
+

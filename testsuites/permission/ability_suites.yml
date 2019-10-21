@@ -11,6 +11,6 @@ testcases:
     testcase: testcases/permission/pf_levelhigh_permission.yml
 
 -   name: 权限校验3
-    testcase: testcases/permission/pf_permission.yml
+    testcase: testcases/permission/ques_pf_permission.yml
 
 

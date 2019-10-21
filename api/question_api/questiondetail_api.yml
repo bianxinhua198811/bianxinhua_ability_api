@@ -1,7 +1,6 @@
 name: 查看提问详情：/v2/question/details
 base_url: ${ENV(base_url)}
 variables:
-    variables:
     currtime: ${make_time()}
     uuid: ${make_uuid()}
     access_token: ${get_accesstoken()}

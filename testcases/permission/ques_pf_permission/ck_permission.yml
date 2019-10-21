@@ -1,5 +1,5 @@
 config:
-    name: 无评分权限人员查看问题权限校验21
+    name: 无评分权限人员-查看问题-权限校验21
 #    #清理数据
 #    teardown_hooks:
 #        - ${teardown_hook_clean_db()}

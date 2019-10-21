@@ -11,4 +11,4 @@ testcases:
     testcase: testcases/permission/pf_levelhigh_permission.yml
 
 -   name: 高级别评分权限用户审核
-    testcase: testcases/permission/pf_permission.yml
+    testcase: testcases/permission/ques_pf_permission.yml

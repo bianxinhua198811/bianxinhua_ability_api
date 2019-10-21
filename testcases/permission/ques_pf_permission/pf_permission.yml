@@ -1,5 +1,5 @@
 config:
-    name: 评分权限人员查看问题权限校验42
+    name: 评分权限人员-审核问题-查看问题-权限校验42
 #    #清理数据
 #    teardown_hooks:
 #        - ${teardown_hook_clean_db()}
@@ -33,8 +33,8 @@ teststeps:
 -   name: 18200000005审核问题
     api: api/question_api/auditquestion_api.yml
 
--   name: 18200000005申请解决问题
-    api: api/question_api/applyForQuestions_api.yml
+#-   name: 18200000005申请解决问题
+#    api: api/question_api/applyForQuestions_api.yml
 
 -   name: 18200000005查看问题详情
     api: api/question_api/questiondetail_api.yml

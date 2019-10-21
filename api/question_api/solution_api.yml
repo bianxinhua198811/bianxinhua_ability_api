@@ -1,11 +1,12 @@
-name: 审核提问:/v1/question/auditQuestion
+name: 我来解决：/v1/question/ISolve
 base_url: ${ENV(base_url)}
 variables:
     currtime: ${make_time()}
     uuid: ${make_uuid()}
     access_token: ${get_accesstoken()}
     sign: ${make_sign($currtime, $uuid, $access_token)}
-
+output:
+    sid: sid
 request:
     headers:
         Content-Type: application/json;charset=utf-8
@@ -17,20 +18,19 @@ request:
         X-MMM-Sign: $sign
         X-MMM-Timestamp: $currtime
         X-MMM-Uuid: $uuid
-        X-MMM-Version: 0.5.0
+        X-MMM-Version: 0.5.1
     json:
-        id: $qid
-        published: 1
-        qTypeId: 59
-        scoreAnalyze: 0.0
-        scoreAsk: 0.1
-        scoreScheme: 0.0
+        content: 我来分析的内容
+        qid: $qid
     method: POST
-    url: /v1/question/auditQuestion
+    url: /v1/question/ISolve
+extract:
+    sid: content.data.solution.id
 validate:
 -   eq:
     - content.code
     - 0
 -   eq:
     - content.msg
-    - 审核成功
+    - 发布方案成功
+

@@ -1,7 +1,6 @@
 name: 待我审核:/v1/question/audits
 base_url: ${ENV(base_url)}
 variables:
-    variables:
     currtime: ${make_time()}
     uuid: ${make_uuid()}
     access_token: ${get_accesstoken()}
