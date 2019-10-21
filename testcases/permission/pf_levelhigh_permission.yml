@@ -1,0 +1,57 @@
+config:
+    name: 高级别评分权限人员查看问题权限校验42
+#    #清理数据
+#    teardown_hooks:
+#        - ${teardown_hook_clean_db()}
+#        - ${teardown_hook_sleep_N_secs($response,2)}
+
+teststeps:
+
+-   name: 提问人员A登录系统
+    variables:
+        phone: ${ENV(twphone)}
+    testcase: testcases/tw_login_testcases.yml
+
+-   name: A发布提问
+    api: api/firstpage_api/addquestion_api.yml
+
+-   name: 有评分权限B登录系统
+    variables:
+        currtime: ${make_time()}
+        uuid: ${make_uuid()}
+        access_token: ''
+        sign: ${make_sign($currtime, $uuid,$access_token)}
+        phone: ${ENV(pfphone)}
+    testcase: testcases/pf_login_testcases.yml
+
+-   name: 有评分权限B查看待我审核
+    output:
+        qid: qid
+    api: api/question_api/audits_api.yml
+    extract:
+        qid: content.data.questions.0.id
+    validate:
+        - eq:
+              - content.data.questions.0.id
+              - $qid
+
+-   name: 有评分权限B审核问题
+    api: api/question_api/auditquestion_api.yml
+
+-   name: 高级别有评分权限C登录系统
+    variables:
+        currtime: ${make_time()}
+        uuid: ${make_uuid()}
+        access_token: ''
+        sign: ${make_sign($currtime, $uuid,$access_token)}
+        phone: ${ENV(pflevelhighphone)}
+    testcase: testcases/pf_login_testcases.yml
+
+-   name: 高级别评分权限C查看问题详情
+    api: api/question_api/questiondetail_api.yml
+    validate:
+        - eq:
+              - content.data.question.permission
+              - 42
+
+

@@ -1,0 +1,46 @@
+name: 发布提问:/v1/question/addQuestion
+base_url: ${ENV(base_url)}
+variables:
+    currtime: ${make_time()}
+    uuid: ${make_uuid()}
+    access_token: ${get_accesstoken()}
+    sign: ${make_sign($currtime, $uuid, $access_token)}
+    title: API测试标题${get_nowtime()}
+    content: API测试内容${get_nowtime()}
+    relatedDepsid: 141
+    msg: '发布成功'
+request:
+    headers:
+        Content-Type: application/json;charset=utf-8
+        User-Agent: okhttp/3.12.3
+        X-MMM-AccessToken: $access_token
+        X-MMM-AppName: com.mmm.ability
+        X-MMM-AppProject: ability
+        X-MMM-DeviceType: '1'
+        X-MMM-Sign: $sign
+        X-MMM-Timestamp: $currtime
+        X-MMM-Uuid: $uuid
+        X-MMM-Version: 0.4.0
+    json:
+        content: $content
+        id: 0
+        pictures:
+        -   h: 1280
+            path: http://ability-test.fjmaimaimai.com:8899/html/ab/1569395719018957698.jpeg
+            w: 960
+        relatedDeps:
+        -   id: $relatedDepsid
+            name: 产品部1111111
+            selected: true
+        title: $title
+        way: 1
+    method: POST
+    url: /v1/question/addQuestion
+validate:
+    -   eq:
+        - content.code
+        - 0
+    -   eq:
+        - content.msg
+        #- 发布成功
+        - $msg

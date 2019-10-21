@@ -1,0 +1,17 @@
+config:
+    name: 发布提问
+#    #清理数据
+#    teardown_hooks:
+#        - ${teardown_hook_clean_db()}
+#        - ${teardown_hook_sleep_N_secs($response,2)}
+
+teststeps:
+
+-   name: 提问人员A登录系统
+    variables:
+        phone: ${ENV(twphone)}
+    testcase: testcases/tw_login_testcases.yml
+
+-   name: A发布提问
+    api: api/firstpage_api/addquestion_api.yml
+

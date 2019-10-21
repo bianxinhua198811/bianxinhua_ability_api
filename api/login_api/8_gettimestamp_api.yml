@@ -1,0 +1,14 @@
+name: /api/time/get_timestamp
+base_url: ${ENV(base_url)}
+request:
+    headers:
+        User-Agent: okhttp/3.12.3
+    method: GET
+    url: /api/time/get_timestamp
+validate:
+  -   eq:
+      - content.msg
+      - success
+  -   eq:
+      - content.code
+      - 0

@@ -1,0 +1,30 @@
+name: 上传语音:/v1/upload/voice
+base_url: ${ENV(base_url)}
+variables:
+    currtime: ${make_time()}
+    uuid: ${make_uuid()}
+    var_access_token: ${get_accesstoken()}
+    sign: ${make_sign($currtime, $uuid, $var_access_token)}
+
+request:
+    data: ""
+    headers:
+        Content-Type: multipart/form-data; boundary=3f3cb50c-02f2-478d-87bf-c293ab4b7dae
+        User-Agent: okhttp/3.12.3
+        X-MMM-AccessToken: $var_access_token
+        X-MMM-AppName: com.mmm.ability
+        X-MMM-AppProject: ability
+        X-MMM-DeviceType: '1'
+        X-MMM-Sign: $sign
+        X-MMM-Timestamp: $currtime
+        X-MMM-Uuid: $uuid
+        X-MMM-Version: 0.5.0
+    method: POST
+    url: /v1/upload/voice
+validate:
+-   eq:
+    - content.code
+    - 0
+-   eq:
+    - content.msg
+    - 上传成功

@@ -1,0 +1,16 @@
+config:
+    name: login_testcases
+    base_url: ${ENV(base_url)}
+    variables:
+        phone: ${ENV(twphone)}
+
+teststeps:
+-   name: /v1/auth/1_login_api
+    api: api/login_api/1_login_api.yml
+    teardown_hooks:
+        - ${teardown_hook_get_authcode($response)}
+
+-   name: /v1/auth/2_accessToken_api
+    api: api/login_api/2_accessToken_api.yml
+    teardown_hooks:
+        - ${teardown_hook_get_accesstoken($response)}

@@ -1,0 +1,30 @@
+name: 消息数量统计（首页、个人中心）:/v1/message/msgStatistics
+base_url: ${ENV(base_url)}
+variables:
+    currtime: ${make_time()}
+    uuid: ${make_uuid()}
+    access_token: ${get_accesstoken()}
+    sign: ${make_sign($currtime, $uuid, $access_token)}
+request:
+    headers:
+        Content-Type: application/json;charset=utf-8
+        User-Agent: okhttp/3.12.3
+        X-MMM-AccessToken: $access_token
+        X-MMM-AppName: com.mmm.ability
+        X-MMM-AppProject: ability
+        X-MMM-DeviceType: '1'
+        X-MMM-Sign: $sign
+        X-MMM-Timestamp: $currtime
+        X-MMM-Uuid: $uuid
+        X-MMM-Version: 0.4.0
+    json:
+        typeTotal: 1835011
+    method: POST
+    url: /v1/message/msgStatistics
+validate:
+  -   eq:
+      - content.code
+      - 0
+  -   eq:
+      - content.msg
+      - 获取统计信息成功
