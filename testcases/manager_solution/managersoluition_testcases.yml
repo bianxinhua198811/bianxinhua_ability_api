@@ -1,0 +1,49 @@
+config:
+    name: testcase description
+    variables:
+        phone: ${ENV(jjphone)}
+        solve_content: 解决方案完美${get_nowtime()}
+    output:
+        cookies: cookies
+teststeps:
+-   name: 18200000003登录后台管理系统：/login
+    request:
+        data:
+            _token: EUpDYPxhzUQrDjvorSDKRb2tedXRdw7JCaEZGBAV
+            password: '123456'
+            phone: $phone
+        headers:
+            Content-Type: application/x-www-form-urlencoded
+            Sec-Fetch-Mode: navigate
+            Sec-Fetch-Site: same-origin
+            Sec-Fetch-User: ?1
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/77.0.3865.75 Safari/537.36
+        method: POST
+        url: http://ability-mg-test.fjmaimaimai.com/login
+    extract:
+        cookies: cookies
+-   name: 解决问题：/questions/问题id/solution
+    request:
+        data:
+            solve_content: $solve_content
+            solve_imgs: solve_imgs%5B%5D=http%3A%2F%2Fability-mg-test.fjmaimaimai.com%2Fuploads%2Fimages%2Favtar%2F201910%2F22%2F1571728003_za5xQp5RFX.jpg%2C1024%2C768
+            solve_scoreSolve: '11.1'
+            solve_user_id: '3218697952653056'
+        headers:
+            Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+            Sec-Fetch-Mode: cors
+            Sec-Fetch-Site: same-origin
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/77.0.3865.75 Safari/537.36
+            X-CSRF-TOKEN: EUpDYPxhzUQrDjvorSDKRb2tedXRdw7JCaEZGBAV
+            X-Requested-With: XMLHttpRequest
+        method: POST
+        url: http://ability-mg-test.fjmaimaimai.com/questions/$qid/solution
+    validate:
+    -   eq:
+        - content.code
+        - 0
+    -   eq:
+        - content.msg
+        - 操作成功！

@@ -5,6 +5,7 @@ variables:
     uuid: ${make_uuid()}
     access_token: ${get_accesstoken()}
     sign: ${make_sign($currtime, $uuid, $access_token)}
+    content: 我来分析的内容${get_nowtime()}
 output:
     sid: sid
 request:
@@ -20,12 +21,12 @@ request:
         X-MMM-Uuid: $uuid
         X-MMM-Version: 0.5.1
     json:
-        content: 我来分析的内容
+        content: $content
         qid: $qid
     method: POST
     url: /v1/question/ISolve
 extract:
-    sid: content.data.solution.id
+    sid: content.data.manager_solution.id
 validate:
 -   eq:
     - content.code

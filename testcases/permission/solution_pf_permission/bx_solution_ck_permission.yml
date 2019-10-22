@@ -13,7 +13,7 @@ teststeps:
 -   name: 评分权限人员18200000005我来分析
     api: api/question_api/solution_api.yml
     extract:
-        sid: content.data.solution.id
+        sid: content.data.manager_solution.id
 
 -   name: 无评分权限18200000004登录系统
     variables:
@@ -28,7 +28,7 @@ teststeps:
     api: api/question_api/solutiondetails_api.yml
     validate:
         - eq:
-              - content.data.solution.permission
+              - content.data.manager_solution.permission
               - 1
 
 
