@@ -102,11 +102,26 @@ def get_authcode():
     return authcode_value
 
 def teardown_hook_clean_db():
+    """
+    结束时清理数据库中的所有数据
+    :return:
+    """
     db = pymysql.connect(host="115.29.205.99",port=3306,user="shiqiurong", password="QGaBlwXT123dfvc7ip",db= "ability_display",charset='utf8')
     cursor = db.cursor()
-    cursor.execute("SELECT VERSION()")
-    data = cursor.fetchone()
-    print("data ={}".format(data))
+    try:
+        #删除评论
+        cursor.execute("delete d from comment d LEFT JOIN  comment a on d.id=a.cid LEFT JOIN question b on a.id = b.id LEFT JOIN departments c on  b.relevantDepartmentId =c.id where   c.company_id =42 and c.enabled = 1")
+        cursor.execute("delete d from comment d LEFT JOIN solution a on d.id=a.id LEFT JOIN question b on a.qid = b.id LEFT JOIN departments c on  b.relevantDepartmentId =c.id where   c.company_id =42 and c.enabled = 1")
+        cursor.execute("delete d from comment d LEFT JOIN question a on d.id =a.id  LEFT JOIN departments b on  a.relevantDepartmentId =b.id  where b.company_id =42 and b.enabled = 1")
+        #删除解决方案
+        cursor.execute("delete a from solution a LEFT JOIN question b on a.qid=b.id LEFT JOIN departments c  on b.relevantDepartmentId=c.id where c.company_id =42 and c.enabled = 1")
+        #删除问题
+        cursor.execute("delete a from question a LEFT JOIN departments b on a.relevantDepartmentId=b.id where b.company_id =42 and b.enabled = 1")
+        db.commit()
+        print("delete OK")
+    except:
+        # 发生错误时回滚
+        db.rollback()
     db.close()
 
 def add(x, y) -> str:
