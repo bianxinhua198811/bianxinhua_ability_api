@@ -117,12 +117,17 @@ def teardown_hook_clean_db():
         cursor.execute("delete a from solution a LEFT JOIN question b on a.qid=b.id LEFT JOIN departments c  on b.relevantDepartmentId=c.id where c.company_id =42 and c.enabled = 1")
         #删除问题
         cursor.execute("delete a from question a LEFT JOIN departments b on a.relevantDepartmentId=b.id where b.company_id =42 and b.enabled = 1")
+        #删除用户消息表
+        cursor.execute("delete a from user_msg a LEFT JOIN user_info b on a.uid=b.uid   where b.company_id=42")
+        # 删除用户星数变动表
+        cursor.execute("delete a from user_score_change a LEFT JOIN user_info b on a.uid=b.uid   where b.company_id=42")
         db.commit()
         print("delete OK")
     except:
         # 发生错误时回滚
         db.rollback()
     db.close()
+
 
 def add(x, y) -> str:
     """
