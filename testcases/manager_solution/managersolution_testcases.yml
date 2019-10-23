@@ -29,7 +29,7 @@ teststeps:
             solve_content: $solve_content
             solve_imgs: solve_imgs%5B%5D=http%3A%2F%2Fability-mg-test.fjmaimaimai.com%2Fuploads%2Fimages%2Favtar%2F201910%2F22%2F1571728003_za5xQp5RFX.jpg%2C1024%2C768
             solve_scoreSolve: '11.1'
-            solve_user_id: '3218697952653056'
+            solve_user_id: '3218698329093888'
         headers:
             Content-Type: application/x-www-form-urlencoded; charset=UTF-8
             Sec-Fetch-Mode: cors
