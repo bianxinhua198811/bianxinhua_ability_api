@@ -1,5 +1,5 @@
 config:
-    name: 评分权限人员-查看方案-权限校验2
+    name: 同级别评分权限人员-查看方案-权限校验2
 
 teststeps:
 
@@ -13,9 +13,9 @@ teststeps:
 -   name: 评分权限人员18200000005我来分析
     api: api/question_api/solution_api.yml
     extract:
-        sid: content.data.manager_solution.id
+        sid: content.data.solution.id
 
--   name: 有评分权限18200000007登录系统
+-   name: 同级别有评分权限18200000007登录系统
     variables:
         currtime: ${make_time()}
         uuid: ${make_uuid()}
@@ -24,11 +24,11 @@ teststeps:
         phone: ${ENV(pflevelequalphone)}
     testcase: testcases/login_testcases.yml
 
--   name: 有评分权限人员18200000007查看方案权限
+-   name: 同级别有评分权限人员18200000007查看方案权限
     api: api/question_api/solutiondetails_api.yml
     validate:
         - eq:
-              - content.data.manager_solution.permission
+              - content.data.solution.permission
               - 2
 
 
