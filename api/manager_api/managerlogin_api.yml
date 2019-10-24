@@ -1,0 +1,32 @@
+name: /login
+variables:
+    phone: ${ENV(jjphone)}
+output:
+    cookies: cookies
+teardown_hooks:
+        - ${teardown_hook_get_cookie($response)}
+request:
+    data:
+        _token: GUgfiwG0Y1iIPKxPhwUqmN9hmRL55m8Ay9QjzRvm
+        password: '123456'
+        phone: $phone
+    headers:
+        Host: ability-mg-test.fjmaimaimai.com
+        Connection: keep-alive
+        Cache-Control: max-age=0
+        Origin: https://ability-mg-test.fjmaimaimai.com
+        Content-Type: application/x-www-form-urlencoded
+        User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.75 Safari/537.36
+        Sec-Fetch-Mode: navigate
+        Sec-Fetch-User: ?1
+        Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+        Sec-Fetch-Site: same-origin
+        Referer: https://ability-mg-test.fjmaimaimai.com/login
+        Accept-Encoding: gzip, deflate, br
+        Accept-Language: zh-CN,zh;q=0.9
+        #Cookie: _session=eyJpdiI6IlE3SkpXcDdZK1M3bW85NkxHMW45SUE9PSIsInZhbHVlIjoiVnREZ1pGOFp0a0tkaHNhMnA3WEFWNjB3U013V1luaXhhOGVzMUJjQ0JDU3NxZnBQZTZjNzlQZWN6aGtcL3hETzkiLCJtYWMiOiJiZjJjMmMzNjU0NDc0MWNhMDZiZGFmMTgwNDg3ZTYzYjA4NThlNzJiNmVkNzI4ZWQwMjc1ZGRiODdkMmY1OThlIn0%3D
+
+    method: POST
+    url: http://ability-mg-test.fjmaimaimai.com/login
+extract:
+    cookies: cookies

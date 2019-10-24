@@ -1,0 +1,33 @@
+config:
+    name: "测试集demo"
+
+
+testcases:
+
+-   name: start....初始化数据库
+    testcase: testcases/start_testcases.yml
+
+-   name: 测试用例1
+    testcase: testcases/permission/ques_pf_permission/ck_permission.yml
+
+-   name: 测试用例2
+    testcase: testcases/permission/ques_pf_permission/pf_levelequal_permission.yml
+
+-   name: 测试用例3
+    testcase: testcases/permission/ques_pf_permission/pf_levelhigh_permission.yml
+
+-   name: 测试用例4
+    testcase: testcases/permission/ques_pf_permission/pf_permission.yml
+
+-   name: 参数化demo
+    testcase: testcases/question/add_question.yml
+    parameters:
+        title-content: ${P(config/title_content_msg.csv)}
+
+
+
+
+
+
+
+
