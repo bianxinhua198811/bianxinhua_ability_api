@@ -1,5 +1,7 @@
 config:
     name: 通过后台管理系统解决问题
+    output:
+        qid: qid
 
 teststeps:
 

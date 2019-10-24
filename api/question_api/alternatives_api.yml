@@ -1,0 +1,33 @@
+name: 备选方案列表:/v1/question/alternatives
+base_url: ${ENV(base_url)}
+variables:
+    currtime: ${make_time()}
+    uuid: ${make_uuid()}
+    access_token: ${get_accesstoken()}
+    sign: ${make_sign($currtime, $uuid, $access_token)}
+
+request:
+    headers:
+        Content-Type: application/json;charset=utf-8
+        User-Agent: okhttp/3.12.3
+        X-MMM-AccessToken: $access_token
+        X-MMM-AppName: com.mmm.ability
+        X-MMM-AppProject: ability
+        X-MMM-DeviceType: '1'
+        X-MMM-Sign: $sign
+        X-MMM-Timestamp: $currtime
+        X-MMM-Uuid: $uuid
+        X-MMM-Version: 0.5.4
+    json:
+        lastId: 0
+        pageSize: 20
+        qid: $qid
+    method: POST
+    url: /v1/question/alternatives
+validate:
+-   eq:
+    - content.code
+    - 0
+-   eq:
+    - content.msg
+    - 获取备选方案列表成功

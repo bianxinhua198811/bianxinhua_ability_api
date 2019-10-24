@@ -1,0 +1,35 @@
+config:
+    name: 与解决权限人员同级别的人查看解决方案-权限校验1
+
+teststeps:
+
+-   name: 解决权限人员18200000006解决问题，主导人是18200000003
+    testcase: testcases/question/solution_question.yml
+    extract:
+        qid: content.data.questions.0.id
+
+-   name: 解决权限人员18200001006登录系统
+    variables:
+        currtime: ${make_time()}
+        uuid: ${make_uuid()}
+        access_token: ''
+        sign: ${make_sign($currtime, $uuid,$access_token)}
+        phone: ${ENV(jjlevelequalphone)}
+    testcase: testcases/login_testcases.yml
+
+-   name: 解决权限人员18200001006查看问题详情
+    output:
+        sid: sid
+    api: api/question_api/questiondetail_api.yml
+    extract:
+        sid: content.data.question.solutions.0.id
+
+-   name: 解决权限人员18200001006查看方案权限
+    api: api/question_api/solutiondetails_api.yml
+    validate:
+        - eq:
+              - content.data.solution.permission
+              - 1
+
+
+
