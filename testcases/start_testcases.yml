@@ -1,0 +1,10 @@
+config:
+    name: start_testcases
+    #清理数据
+    setup_hooks:
+        - ${setup_hook_clean_db()}
+
+teststeps:
+-   name: start_testcases
+    api: api/login_api/8_gettimestamp_api.yml
+

@@ -39,7 +39,7 @@ teststeps:
         uuid: ${make_uuid()}
         access_token: ''
         sign: ${make_sign($currtime, $uuid,$access_token)}
-        phone: ${ENV(pflevelequalphone)}
+        phone: ${ENV(pfphone1)}
     testcase: testcases/login_testcases.yml
 
 -   name: 同级别评分权限18200000007查看问题详情

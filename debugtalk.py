@@ -101,9 +101,9 @@ def get_authcode():
     authcode_value = str(authcode_value)
     return authcode_value
 
-def teardown_hook_clean_db():
+def setup_hook_clean_db():
     """
-    结束时清理数据库中的所有数据
+    初始化时清理数据库中的历史数据
     :return:
     """
     db = pymysql.connect(host="115.29.205.99",port=3306,user="shiqiurong", password="QGaBlwXT123dfvc7ip",db= "ability_display",charset='utf8')
