@@ -121,6 +121,20 @@ def setup_hook_clean_db():
         cursor.execute("delete a from user_msg a LEFT JOIN user_info b on a.uid=b.uid   where b.company_id=42")
         # 删除用户星数变动表
         cursor.execute("delete a from user_score_change a LEFT JOIN user_info b on a.uid=b.uid   where b.company_id=42")
+        # 删除用户解决申请表
+        cursor.execute("delete from user_question_solve where uid in (select uid from user_info where company_id=42)")
+        # 删除质疑表
+        cursor.execute("delete from doubt where company_id=42")
+        # 删除额外加分表
+        cursor.execute("delete from bonus_point where company_id=42")
+        # 删除公告表
+        cursor.execute("delete from bulletin where company_id=42")
+        # 删除表彰管理表
+        cursor.execute("delete from commend where company_id=42")
+        # 删除用户消息表
+        cursor.execute("delete from user_msg where uid in (select uid from user_info where company_id=42)")
+        # 删除用户同感表
+        cursor.execute("delete from user_sympathy where uid in (select uid from user_info where company_id=42)")
         db.commit()
         print("delete OK")
     except:
@@ -129,12 +143,12 @@ def setup_hook_clean_db():
     db.close()
 
 
-def add(x, y) -> str:
+def add(x, y) -> int:
     """
     对两个数相加
     :param x:
     :param y:
     :return:
     """
-    return str(int(x)+y)
+    return int(int(x)+y)
 

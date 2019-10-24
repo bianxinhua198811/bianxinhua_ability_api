@@ -5,7 +5,7 @@ variables:
     uuid: ${make_uuid()}
     access_token: ${get_accesstoken()}
     sign: ${make_sign($currtime, $uuid, $access_token)}
-
+    published: 1
 request:
     headers:
         Content-Type: application/json;charset=utf-8
@@ -20,7 +20,7 @@ request:
         X-MMM-Version: 0.5.0
     json:
         id: $qid
-        published: 1
+        published: $published
         qTypeId: 59
         scoreAnalyze: 0.0
         scoreAsk: 0.1
