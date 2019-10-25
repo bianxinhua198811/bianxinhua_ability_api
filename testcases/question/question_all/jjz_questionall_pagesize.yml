@@ -1,0 +1,28 @@
+config:
+    name: 公司全部提问-解决中列表翻页功能，验证最后一页问题数量
+
+teststeps:
+
+-   name: 18200000002登录系统
+    variables:
+        phone: ${ENV(pflevelhighphone)}
+    testcase: testcases/login_testcases.yml
+
+-   name: 查看解决中数量
+    api: api/message_api/msgstatistics_api.yml
+    extract:
+        jjznum: content.data.totals.4.total
+
+-   name: 18200000002查看最后一页解决中列表
+    variables:
+        solved: 2
+        pageIndex: ${pagesize($jjznum,20)}
+        lastpagenum: ${cal($jjznum,$pageIndex,20)}
+    api: api/question_api/questionall_api.yml
+    validate:
+        - len_eq:
+              - content.data.questions
+              - $lastpagenum
+
+
+

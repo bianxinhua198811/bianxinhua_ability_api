@@ -5,6 +5,7 @@ import random
 import time
 import uuid
 
+
 import pymysql
 
 
@@ -151,4 +152,24 @@ def add(x, y) -> int:
     :return:
     """
     return int(int(x)+y)
+
+def pagesize(x, y) -> int:
+    """
+    判断页数
+    :param x:
+    :param y:
+    :return:
+    """
+    rem = (int(int(x)%y))
+    if rem == 0 :
+        page_size = int(int(x)/y-1)
+    else:
+        page_size = int(int(x)/y)
+    return page_size
+
+def cal(x, y, z) -> int:
+    return int(x-y*z)
+
+def callen(value) -> int:
+    return len(value)
 
