@@ -6,10 +6,11 @@ teststeps:
 -   name: 18100000004提出问题
     testcase: testcases/question/add_question.yml
 
--   name: 查看未解决数量
+-   name: 查看未解决数量和总提问数量
     api: api/message_api/msgstatistics_api.yml
     extract:
         wjjnum: content.data.totals.2.total
+        ztwnum: content.data.totals.1.total
 
 -   name: 有评分权限18200000005登录系统
     variables:
@@ -43,12 +44,15 @@ teststeps:
         phone: ${ENV(twphone)}
     testcase: testcases/login_testcases.yml
 
--   name: 查看未解决数量
+-   name: 查看未解决数量和总提问数量
     api: api/message_api/msgstatistics_api.yml
     validate:
         - eq:
               - content.data.totals.2.total
               - ${add($wjjnum,1)}
+        - eq:
+              - content.data.totals.1.total
+              - ${add($ztwnum,1)}
 
 
 

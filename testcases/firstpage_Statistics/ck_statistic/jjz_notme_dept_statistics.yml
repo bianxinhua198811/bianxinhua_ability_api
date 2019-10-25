@@ -8,10 +8,11 @@ teststeps:
         phone: ${ENV(ckphone)}
     testcase: testcases/login_testcases.yml
 
--   name: 18200000004查看未解决数量
+-   name: 18200000004查看解决中数量和总提问数量
     api: api/message_api/msgstatistics_api.yml
     extract:
         jjznum: content.data.totals.4.total
+        ztwnum: content.data.totals.1.total
 
 -   name: 提问人员18200000001登录系统
     variables:
@@ -62,13 +63,15 @@ teststeps:
         phone: ${ENV(ckphone)}
     testcase: testcases/login_testcases.yml
 
--   name: 18200000004查看未解决数量
+-   name: 18200000004查看解决中数量和总提问数量
     api: api/message_api/msgstatistics_api.yml
     validate:
         - eq:
               - content.data.totals.4.total
               - ${add($jjznum,1)}
-
+        - eq:
+              - content.data.totals.1.total
+              - ${add($ztwnum,1)}
 
 
 
