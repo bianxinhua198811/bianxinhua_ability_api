@@ -1,0 +1,32 @@
+name: 发布备选方案（分析）
+base_url: ${ENV(base_url)}
+variables:
+    currtime: ${make_time()}
+    uuid: ${make_uuid()}
+    access_token: ${get_accesstoken()}
+    sign: ${make_sign($currtime, $uuid, $access_token)}
+
+
+request:
+    headers:
+        Content-Type: application/json
+        User-Agent: abilityIOSTest/50002 CFNetwork/889.9 Darwin/17.2.0
+        X-MMM-AccessToken: $access_token
+        X-MMM-AppProject: ability
+        X-MMM-DeviceType: '0'
+        X-MMM-Sign: $sign
+        X-MMM-Timestamp: $currtime
+        X-MMM-Uuid: $uuid
+        X-MMM-Version: 0.5.0
+    json:
+        content: 分析问题${get_nowtime()}
+        qid: $qid
+    method: POST
+    url: /v1/question/ISolve
+validate:
+-   eq:
+    - content.code
+    - 0
+-   eq:
+    - content.msg
+    - 发布方案成功

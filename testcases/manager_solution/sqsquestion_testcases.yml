@@ -1,0 +1,51 @@
+config:
+    name: 解除申请
+    variables:
+        phone: ${ENV(jjphone)}
+    output:
+        cookies: cookies
+teststeps:
+-   name: 18500000100登陆/login
+    request:
+        data:
+            _token: aXoN6NHdBGOXOk2wplttIgE5tzOC5bhMeUkPUHpl
+            password: '123456'
+            phone: $phone
+        headers:
+            Content-Type: application/x-www-form-urlencoded
+            Sec-Fetch-Mode: navigate
+            Sec-Fetch-Site: same-origin
+            Sec-Fetch-User: ?1
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/77.0.3865.75 Safari/537.36
+        method: POST
+        url: http://ability-mg-test.fjmaimaimai.com/login
+    extract:
+        cookies: cookies
+
+-   name: 解除申请/question_sqs/unset-sq
+    request:
+        headers:
+#            cookies: $cookies
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+            X-CSRF-TOKEN: aXoN6NHdBGOXOk2wplttIgE5tzOC5bhMeUkPUHpl
+            X-Requested-With: XMLHttpRequest
+        method: GET
+        params:
+            id: ${get_solveid($qid)}
+            qid: $qid
+        url: http://ability-mg-test.fjmaimaimai.com/question_sqs/unset-sq
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json
+    -   eq:
+        - content.code
+        - 0
+    -   eq:
+        - content.msg
+        - 成功
