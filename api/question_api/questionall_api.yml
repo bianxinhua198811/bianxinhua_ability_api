@@ -1,11 +1,12 @@
-name: 审核提问:/v1/question/auditQuestion
+name: /v2/question/all
 base_url: ${ENV(base_url)}
 variables:
     currtime: ${make_time()}
     uuid: ${make_uuid()}
     access_token: ${get_accesstoken()}
     sign: ${make_sign($currtime, $uuid, $access_token)}
-    published: 1
+    solved: 0
+    pageIndex: 0
 request:
     headers:
         Content-Type: application/json;charset=utf-8
@@ -17,20 +18,17 @@ request:
         X-MMM-Sign: $sign
         X-MMM-Timestamp: $currtime
         X-MMM-Uuid: $uuid
-        X-MMM-Version: 0.5.0
+        X-MMM-Version: 0.5.4
     json:
-        id: $qid
-        published: $published
-        qTypeId: 59
-        scoreAnalyze: 0.0
-        scoreAsk: 0.1
-        scoreScheme: 0.0
+        pageIndex: $pageIndex
+        pageSize: 20
+        solved: $solved
     method: POST
-    url: /v1/question/auditQuestion
+    url: /v2/question/all
 validate:
 -   eq:
     - content.code
     - 0
 -   eq:
     - content.msg
-    - 审核成功
+    - 获取提问列表成功

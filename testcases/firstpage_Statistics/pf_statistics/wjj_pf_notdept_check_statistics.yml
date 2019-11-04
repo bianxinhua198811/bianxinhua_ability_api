@@ -1,11 +1,11 @@
 config:
-    name: 通过后台管理系统解决问题
-    output:
-        qid: qid
+    name: 未解决数量验证：评分权限人员-非本人提出的我审核的问题，可以查看
 
 teststeps:
 
--   name: 18100000004提出问题
+-   name: 18100000005提出问题
+    variables:
+        phone: ${ENV(pfphone2)}
     testcase: testcases/question/add_question.yml
 
 -   name: 有评分权限18200000005登录系统
@@ -16,6 +16,12 @@ teststeps:
         sign: ${make_sign($currtime, $uuid,$access_token)}
         phone: ${ENV(pfphone)}
     testcase: testcases/login_testcases.yml
+
+-   name: 查看未解决数量和总提问数量
+    api: api/message_api/msgstatistics_api.yml
+    extract:
+        wjjnum: content.data.totals.2.total
+        ztwnum: content.data.totals.1.total
 
 -   name: 18200000005查看待我审核
     output:
@@ -31,8 +37,16 @@ teststeps:
 -   name: 18200000005审核问题
     api: api/question_api/auditquestion_api.yml
 
--   name: 18200000003解决问题
-    testcase: testcases/manager_solution/managersolution_testcases.yml
+-   name: 查看未解决数量和总提问数量
+    api: api/message_api/msgstatistics_api.yml
+    validate:
+        - eq:
+              - content.data.totals.2.total
+              - ${add($wjjnum,1)}
+        - eq:
+              - content.data.totals.1.total
+              - ${add($ztwnum,1)}
+
 
 
 

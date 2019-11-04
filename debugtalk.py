@@ -5,6 +5,7 @@ import random
 import time
 import uuid
 
+
 import pymysql
 
 
@@ -101,9 +102,9 @@ def get_authcode():
     authcode_value = str(authcode_value)
     return authcode_value
 
-def teardown_hook_clean_db():
+def setup_hook_clean_db():
     """
-    结束时清理数据库中的所有数据
+    初始化时清理数据库中的历史数据
     :return:
     """
     db = pymysql.connect(host="115.29.205.99",port=3306,user="shiqiurong", password="QGaBlwXT123dfvc7ip",db= "ability_display",charset='utf8')
@@ -121,6 +122,20 @@ def teardown_hook_clean_db():
         cursor.execute("delete a from user_msg a LEFT JOIN user_info b on a.uid=b.uid   where b.company_id=42")
         # 删除用户星数变动表
         cursor.execute("delete a from user_score_change a LEFT JOIN user_info b on a.uid=b.uid   where b.company_id=42")
+        # 删除用户解决申请表
+        cursor.execute("delete from user_question_solve where uid in (select uid from user_info where company_id=42)")
+        # 删除质疑表
+        cursor.execute("delete from doubt where company_id=42")
+        # 删除额外加分表
+        cursor.execute("delete from bonus_point where company_id=42")
+        # 删除公告表
+        cursor.execute("delete from bulletin where company_id=42")
+        # 删除表彰管理表
+        cursor.execute("delete from commend where company_id=42")
+        # 删除用户消息表
+        cursor.execute("delete from user_msg where uid in (select uid from user_info where company_id=42)")
+        # 删除用户同感表
+        cursor.execute("delete from user_sympathy where uid in (select uid from user_info where company_id=42)")
         db.commit()
         print("delete OK")
     except:
@@ -129,12 +144,32 @@ def teardown_hook_clean_db():
     db.close()
 
 
-def add(x, y) -> str:
+def add(x, y) -> int:
     """
     对两个数相加
     :param x:
     :param y:
     :return:
     """
-    return str(int(x)+y)
+    return int(int(x)+y)
+
+def pagesize(x, y) -> int:
+    """
+    判断页数
+    :param x:
+    :param y:
+    :return:
+    """
+    rem = (int(int(x)%y))
+    if rem == 0 :
+        page_size = int(int(x)/y-1)
+    else:
+        page_size = int(int(x)/y)
+    return page_size
+
+def cal(x, y, z) -> int:
+    return int(x-y*z)
+
+def callen(value) -> int:
+    return len(value)
 

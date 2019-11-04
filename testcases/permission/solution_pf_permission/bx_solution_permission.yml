@@ -1,5 +1,5 @@
 config:
-    name: 评分权限人员-审核问题-我来分析-查看方案-权限校验1
+    name: 评分权限人员不能给自己提出的备选方案评分-权限校验1
 #    #清理数据
 #    teardown_hooks:
 #        - ${teardown_hook_clean_db()}
@@ -17,13 +17,13 @@ teststeps:
 -   name: 评分权限人员18200000005我来分析
     api: api/question_api/solution_api.yml
     extract:
-        sid: content.data.manager_solution.id
+        sid: content.data.solution.id
 
 -   name: 评分权限人员18200000005查看方案权限
     api: api/question_api/solutiondetails_api.yml
     validate:
         - eq:
-              - content.data.manager_solution.permission
+              - content.data.solution.permission
               - 1
 
 
