@@ -173,3 +173,17 @@ def cal(x, y, z) -> int:
 def callen(value) -> int:
     return len(value)
 
+def get_solveid(qid):
+    #根据问题id，查询相应的解决申请表id
+    db = pymysql.connect(host="115.29.205.99", port=3306, user="shiqiurong", password="QGaBlwXT123dfvc7ip",
+                         db="ability_display", charset='utf8')
+    cursor = db.cursor()
+    try:
+        cursor.execute('select id from user_question_solve where qid = %s',qid)
+        result = cursor.fetchone()
+        id = result[0]
+        return id
+    except:
+        # 发生错误时回滚
+        db.rollback()
+    db.close()
