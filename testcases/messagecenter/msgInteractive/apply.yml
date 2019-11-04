@@ -1,0 +1,42 @@
+config:
+    name: B申请解决问题，提问者A收到互动消息
+
+teststeps:
+-   name: A登陆发布提问
+    testcase: testcases/question/add_question.yml
+
+-   name: B登陆
+    testcase: testcases/login_testcases.yml
+    variables:
+        phone: ${ENV(pfphone)}
+        password: ${ENV(password)}
+
+-   name: B进入待我审核页面
+    api: api/question_api/audits_api.yml
+    extract:
+        qid: content.data.questions.0.id
+
+-   name: B审核该问题
+    api: api/question_api/auditquestion_api.yml
+
+-   name: B申请解决问题
+    api: api/question_api/applyForQuestions_api.yml
+
+-   name: A登陆
+    testcase: testcases/login_testcases.yml
+    variables:
+        phone: ${ENV(ckphone)}
+        currtime: ${make_time()}
+        uuid: ${make_uuid()}
+        access_token: ''
+        sign: ${make_sign($currtime, $uuid,$access_token)}
+
+-   name: A进入互动消息列表
+    api: api/messagecenter_api/msginteractive_api.yml
+    validate:
+      - eq:
+          - content.data.lists.0.question.id
+          - $qid
+      - eq:
+          - content.data.lists.0.isRead
+          - 0

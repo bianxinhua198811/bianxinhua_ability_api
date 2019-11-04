@@ -1,0 +1,46 @@
+config:
+    name: A登录发布提问，B登录审核后，后台上传解决报告，C解决参与者登录收到星数变动消息
+
+teststeps:
+-   name: A登陆发布提问
+    testcase: testcases/question/add_question.yml
+
+-   name: B登陆
+    testcase: testcases/login_testcases.yml
+    variables:
+        phone: ${ENV(pfphone)}
+        password: ${ENV(password)}
+
+-   name: B进入待我审核页面
+    api: api/question_api/audits_api.yml
+    extract:
+        qid: content.data.questions.0.id
+
+-   name: B审核该问题
+    api: api/question_api/auditquestion_api.yml
+
+-   name: 后台解决该问题，主导人为B，参与者为C
+    testcase: testcases/manager_solution/managersoluition_testcases.yml
+    variables:
+        phone: ${ENV(jjphone)}
+        password: ${ENV(password)}
+
+-   name: C登陆
+    testcase: testcases/login_testcases.yml
+    variables:
+        phone: ${ENV(pflevelequalphone)}
+        password: ${ENV(password)}
+        currtime: ${make_time()}
+        uuid: ${make_uuid()}
+        access_token: ''
+        sign: ${make_sign($currtime, $uuid,$access_token)}
+
+-   name: C进入查看星数变动列表
+    api: api\messagecenter_api\msgscorechange_api.yml
+    validate:
+      - eq:
+          - content.data.platformFors.0.qid
+          - $qid
+      - eq:
+          - content.data.platformFors.0.isRead
+          - 0
