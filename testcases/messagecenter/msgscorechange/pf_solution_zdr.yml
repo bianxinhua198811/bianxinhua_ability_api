@@ -20,7 +20,7 @@ teststeps:
     api: api/question_api/auditquestion_api.yml
 
 -   name: 后台解决该问题，主导人为B
-    testcase: testcases/manager_solution/managersoluition_testcases.yml
+    testcase: testcases/manager_solution/managersolution_testcases.yml
     variables:
         phone: ${ENV(jjphone)}
         password: ${ENV(password)}
