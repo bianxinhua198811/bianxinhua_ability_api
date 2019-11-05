@@ -26,6 +26,3 @@ validate:
 -   eq:
     - content.code
     - 0
--   eq:
-    - content.msg
-    - 获取星数变动列表成功

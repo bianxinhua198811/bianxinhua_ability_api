@@ -4,8 +4,10 @@ config:
 teststeps:
 -   name: A登陆发布提问
     testcase: testcases/question/add_question.yml
+    variables:
+        phone: ${ENV(ckphone)}
 
--   name: B登陆
+-   name: B18200000005登陆
     testcase: testcases/login_testcases.yml
     variables:
         phone: ${ENV(pfphone)}
@@ -24,12 +26,13 @@ teststeps:
     variables:
         phone: ${ENV(jjphone)}
         password: ${ENV(password)}
+        solve_user_id: '3218698465507072'
+        solve_partners: '3218730680770304'
 
--   name: C登陆
+-   name: C18200000007登陆
     testcase: testcases/login_testcases.yml
     variables:
-        phone: ${ENV(pflevelequalphone)}
-        password: ${ENV(password)}
+        phone: ${ENV(pfphone1)}
         currtime: ${make_time()}
         uuid: ${make_uuid()}
         access_token: ''

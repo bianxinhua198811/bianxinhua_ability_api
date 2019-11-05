@@ -4,6 +4,8 @@ config:
 teststeps:
 -   name: A登陆发布提问
     testcase: testcases/question/add_question.yml
+    variables:
+        phone: ${ENV(ckphone)}
 
 -   name: B登陆
     testcase: testcases/login_testcases.yml
@@ -28,7 +30,6 @@ teststeps:
     testcase: testcases/login_testcases.yml
     variables:
         phone: ${ENV(pflevelhighphone)}
-        password: ${ENV(password)}
         currtime: ${make_time()}
         uuid: ${make_uuid()}
         access_token: ''
@@ -38,13 +39,12 @@ teststeps:
     api: api/question_api/solutiondetails_api.yml
 
 -   name: C给备选方案评分
-    api: api/question_api/scoreanalyze_api.yml
+    api: api/question_api/scoreAnalyze_api.yml
 
 -   name: B登陆
     testcase: testcases/login_testcases.yml
     variables:
         phone: ${ENV(pfphone)}
-        password: ${ENV(password)}
         currtime: ${make_time()}
         uuid: ${make_uuid()}
         access_token: ''

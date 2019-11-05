@@ -26,7 +26,4 @@ validate:
 -   eq:
     - content.code
     - 0
--   eq:
-    - content.msg
-    - 获取互动消息成功
 

@@ -8,6 +8,8 @@ config:
 teststeps:
 -   name: A登陆发布提问
     testcase: testcases/question/add_question.yml
+    variables:
+        phone: ${ENV(ckphone)}
 
 -   name: B登陆
     testcase: testcases/login_testcases.yml
@@ -30,7 +32,6 @@ teststeps:
     testcase: testcases/login_testcases.yml
     variables:
         phone: ${ENV(ckphone)}
-        password: ${ENV(password)}
         currtime: ${make_time()}
         uuid: ${make_uuid()}
         access_token: ''
@@ -40,7 +41,7 @@ teststeps:
     api: api/messagecenter_api/msginteractive_api.yml
     validate:
       - eq:
-          - content.data.lists.0.question.id
+          - content.data.lists.0.qid
           - $qid
       - eq:
           - content.data.lists.0.isRead
