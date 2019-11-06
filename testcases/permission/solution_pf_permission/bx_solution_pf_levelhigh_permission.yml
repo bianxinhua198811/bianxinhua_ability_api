@@ -35,7 +35,7 @@ teststeps:
         sid: content.data.solutions.0.id
 
 -   name: 有评分权限18200000007评分
-    api: api/question_api/scoreAnalyze_api.yml
+    api: api/question_api/scoreanalyze_api.yml
 
 -   name: 高级别有评分权限18200000002登录系统
     variables:
