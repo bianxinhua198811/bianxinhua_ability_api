@@ -1,5 +1,5 @@
 config:
-    name: A登录发布提问，B登录审核后对该提问分析，C登录对该分析评分，B登录收到星数变动消息
+    name: XX007:A登录发布提问，B登录审核后对该提问分析，C登录对该分析评分，B登录收到星数变动消息
 
 teststeps:
 -   name: A登陆发布提问
@@ -59,3 +59,6 @@ teststeps:
       - eq:
           - content.data.platformFors.0.isRead
           - 0
+      - eq:
+          - content.data.platformFors.0.msgType
+          - 1

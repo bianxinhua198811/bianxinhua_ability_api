@@ -1,5 +1,5 @@
 config:
-    name: B申请解决问题，提问者A收到互动消息
+    name: XX002:B申请解决问题，提问者A收到互动消息
 
 teststeps:
 -   name: A登陆发布提问
@@ -42,3 +42,6 @@ teststeps:
       - eq:
           - content.data.lists.0.isRead
           - 0
+      - eq:
+          - content.data.lists.0.msgType
+          - 1

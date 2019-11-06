@@ -1,5 +1,5 @@
 config:
-    name: A提问，B审核后，后台解决问题，提问者A收到互动消息
+    name: XX006:A发布提问，B审核评分后，提问者A收到星数变动消息
 
 teststeps:
 -   name: A登陆发布提问
@@ -21,12 +21,6 @@ teststeps:
 -   name: B审核该问题
     api: api/question_api/auditquestion_api.yml
 
--   name: 后台登陆解决该问题
-    testcase: testcases\manager_solution\managersolution_testcases.yml
-    variables:
-      phone: ${ENV(jjphone)}
-      password: ${ENV(password)}
-
 -   name: A登陆
     testcase: testcases/login_testcases.yml
     variables:
@@ -36,12 +30,15 @@ teststeps:
         access_token: ''
         sign: ${make_sign($currtime, $uuid,$access_token)}
 
--   name: A进入互动消息列表
-    api: api/messagecenter_api/msginteractive_api.yml
+-   name: A进入查看星数变动列表
+    api: api\messagecenter_api\msgscorechange_api.yml
     validate:
       - eq:
-          - content.data.lists.0.qid
+          - content.data.platformFors.0.qid
           - $qid
       - eq:
-          - content.data.lists.0.isRead
+          - content.data.platformFors.0.isRead
+          - 0
+      - eq:
+          - content.data.platformFors.0.msgType
           - 0
