@@ -1,0 +1,55 @@
+config:
+    name: 增加额外分
+    variables:
+        phone: ${ENV(adminphone)}
+        uid: '3218698423500544'
+        join_date: 2019-11
+        type: 0
+
+#    消息类型type（0发现问题、1分析问题、2解决问题）
+
+    output:
+        cookies: cookies
+
+teststeps:
+-   name: 18000000000登陆/login
+    request:
+        data:
+            _token: X0QssNP7X0Cln7v53vnPhavgu6549q4afy3qtppI
+            password: '123456'
+            phone: $phone
+        headers:
+            Content-Type: application/x-www-form-urlencoded
+            Sec-Fetch-Mode: navigate
+            Sec-Fetch-Site: same-origin
+            Sec-Fetch-User: ?1
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/77.0.3865.75 Safari/537.36
+        method: POST
+        url: http://ability-mg-test.fjmaimaimai.com/login
+    extract:
+        cookies: cookies
+
+-   name: 增加额外分
+    request:
+        data:
+            join_date: $join_date
+            reason: 额外加分内容${get_nowtime()}
+            score: '11'
+            type: $type
+            uid: $uid
+        headers:
+            Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+            X-CSRF-TOKEN: X0QssNP7X0Cln7v53vnPhavgu6549q4afy3qtppI
+            X-Requested-With: XMLHttpRequest
+        method: POST
+        url: https://ability-mg-test.fjmaimaimai.com/bonus_points
+    validate:
+    -   eq:
+        - content.code
+        - 0
+    -   eq:
+        - content.msg
+        - 操作成功！

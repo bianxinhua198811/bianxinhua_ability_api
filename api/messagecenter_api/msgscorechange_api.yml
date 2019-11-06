@@ -4,6 +4,7 @@ variables:
     uuid: ${make_uuid()}
     access_token: ${get_accesstoken()}
     sign: ${make_sign($currtime, $uuid, $access_token)}
+    type: 0
 base_url: ${ENV(base_url)}
 request:
     headers:
@@ -19,7 +20,7 @@ request:
     json:
         lastId: 0
         pageSize: 20
-        type: 0
+        type: $type
     method: POST
     url: /v2/message/msgScoreChange
 validate:
