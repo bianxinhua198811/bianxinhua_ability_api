@@ -1,0 +1,76 @@
+config:
+    name: ST026:未解决数量验证：评分权限人员-非本人提出的非本部门的问题，不可以查看
+
+teststeps:
+
+-   name: 18100000005登录系统
+    variables:
+        phone: ${ENV(pfphone2)}
+    testcase: testcases/login_testcases.yml
+
+-   name: 18100000005查看未解决数量和总提问数量
+    api: api/message_api/msgstatistics_api.yml
+    extract:
+        wjjnum: content.data.totals.2.total
+        ztwnum: content.data.totals.1.total
+
+-   name: 提问人员18100000004登录系统
+    variables:
+        currtime: ${make_time()}
+        uuid: ${make_uuid()}
+        access_token: ''
+        sign: ${make_sign($currtime, $uuid,$access_token)}
+        phone: ${ENV(twphone)}
+    testcase: testcases/login_testcases.yml
+
+-   name: 18100000004发布提问
+    variables:
+        relatedDepsid: 163
+    api: api/firstpage_api/addquestion_api.yml
+
+-   name: 有评分权限18200000005登录系统
+    variables:
+        currtime: ${make_time()}
+        uuid: ${make_uuid()}
+        access_token: ''
+        sign: ${make_sign($currtime, $uuid,$access_token)}
+        phone: ${ENV(pfphone)}
+    testcase: testcases/login_testcases.yml
+
+-   name: 18200000005查看待我审核
+    output:
+        qid: qid
+    api: api/question_api/audits_api.yml
+    extract:
+        qid: content.data.questions.0.id
+    validate:
+        - eq:
+              - content.data.questions.0.id
+              - $qid
+
+-   name: 18200000005审核问题
+    api: api/question_api/auditquestion_api.yml
+
+-   name: 18100000005登录系统
+    variables:
+        currtime: ${make_time()}
+        uuid: ${make_uuid()}
+        access_token: ''
+        sign: ${make_sign($currtime, $uuid,$access_token)}
+        phone: ${ENV(pfphone2)}
+    testcase: testcases/login_testcases.yml
+
+-   name: 18100000005查看未解决数量和总提问数量
+    api: api/message_api/msgstatistics_api.yml
+    validate:
+        - eq:
+              - content.data.totals.2.total
+              - ${add($wjjnum,0)}
+        - eq:
+              - content.data.totals.1.total
+              - ${add($ztwnum,0)}
+
+
+
+
+
