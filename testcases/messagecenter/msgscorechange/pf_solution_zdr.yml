@@ -4,6 +4,8 @@ config:
 teststeps:
 -   name: A登陆发布提问
     testcase: testcases/question/add_question.yml
+    variables:
+        relatedDepsid: 163
 
 -   name: B登陆
     testcase: testcases/login_testcases.yml
@@ -24,6 +26,8 @@ teststeps:
     variables:
         phone: ${ENV(jjphone)}
         password: ${ENV(password)}
+        solve_user_id: '3218698465507072'
+        solve_partners: '3218730680770304'
 
 -   name: B登陆
     testcase: testcases/login_testcases.yml

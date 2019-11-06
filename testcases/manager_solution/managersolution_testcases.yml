@@ -3,6 +3,8 @@ config:
     variables:
         phone: ${ENV(jjphone)}
         solve_content: 解决方案完美${get_nowtime()}
+        solve_user_id: '3218698329093888'
+        solve_partners: '3220143165728256'
     output:
         cookies: cookies
 teststeps:
@@ -29,7 +31,9 @@ teststeps:
             solve_content: $solve_content
             solve_imgs: solve_imgs%5B%5D=http%3A%2F%2Fability-mg-test.fjmaimaimai.com%2Fuploads%2Fimages%2Favtar%2F201910%2F22%2F1571728003_za5xQp5RFX.jpg%2C1024%2C768
             solve_scoreSolve: '11.1'
-            solve_user_id: '3218698329093888'
+            solve_user_id: $solve_user_id
+            solve_partners[0][scoreSolution]: '28.8'
+            solve_partners[0][uid]: $solve_partners
         headers:
             Content-Type: application/x-www-form-urlencoded; charset=UTF-8
             Sec-Fetch-Mode: cors

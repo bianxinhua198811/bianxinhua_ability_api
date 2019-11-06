@@ -4,6 +4,8 @@ config:
 teststeps:
 -   name: A登陆发布提问
     testcase: testcases/question/add_question.yml
+    variables:
+        phone: ${ENV(ckphone)}
 
 -   name: B登陆
     testcase: testcases/login_testcases.yml
@@ -25,7 +27,7 @@ teststeps:
 -   name: 后台登陆解除申请
     testcase: testcases\manager_solution\sqsquestion_testcases.yml
     variables:
-        phone: ${ENV(jjphone)}
+        phone: ${ENV(adminphone)}
         password: ${ENV(password)}
 
 -   name: B登陆
@@ -41,7 +43,7 @@ teststeps:
     api: api/messagecenter_api/msginteractive_api.yml
     validate:
       - eq:
-          - content.data.lists.0.question.id
+          - content.data.lists.0.qid
           - $qid
       - eq:
           - content.data.lists.0.isRead
