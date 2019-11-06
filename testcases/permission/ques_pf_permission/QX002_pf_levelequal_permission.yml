@@ -1,5 +1,5 @@
 config:
-    name: 评分权限人员-审核问题-查看问题-权限校验42
+    name: QX002:同级别评分权限人员-查看问题-权限校验21
 #    #清理数据
 #    teardown_hooks:
 #        - ${teardown_hook_clean_db()}
@@ -19,7 +19,7 @@ teststeps:
         phone: ${ENV(pfphone)}
     testcase: testcases/login_testcases.yml
 
--   name: 18200000005查看待我审核
+-   name: 有评分权限18200000005查看待我审核
     output:
         qid: qid
     api: api/question_api/audits_api.yml
@@ -30,17 +30,23 @@ teststeps:
               - content.data.questions.0.id
               - $qid
 
--   name: 18200000005审核问题
+-   name: 有评分权限18200000005审核问题
     api: api/question_api/auditquestion_api.yml
 
-#-   name: 18200000005申请解决问题
-#    api: api/question_api/applyForQuestions_api.yml
+-   name: 同级别有评分权限18200000007登录系统
+    variables:
+        currtime: ${make_time()}
+        uuid: ${make_uuid()}
+        access_token: ''
+        sign: ${make_sign($currtime, $uuid,$access_token)}
+        phone: ${ENV(pfphone1)}
+    testcase: testcases/login_testcases.yml
 
--   name: 18200000005查看问题详情
+-   name: 同级别评分权限18200000007查看问题详情
     api: api/question_api/questiondetail_api.yml
     validate:
         - eq:
               - content.data.question.permission
-              - 42
+              - 21
 
 

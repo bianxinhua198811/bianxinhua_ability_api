@@ -1,12 +1,12 @@
 config:
-    name: 未评分过的备选方案，有评分权限人员-查看方案-权限校验2
+    name: QX009:未评分过的备选方案，有评分权限人员-查看方案-权限校验2
 
 teststeps:
 
 -   name: 评分权限人员18200000005查看问题-审核问题
     output:
         qid: qid
-    testcase: testcases/permission/ques_pf_permission/pf_permission.yml
+    testcase: testcases/permission/ques_pf_permission/QX001_pf_permission.yml
     extract:
         qid: content.data.questions.0.id
 
