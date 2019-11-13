@@ -9,7 +9,7 @@ config:
 #    消息类型type（0发现问题、1分析问题、2解决问题）
 
     output:
-        cookies: cookies
+        - cookies
 
 teststeps:
 -   name: 18000000000登陆/login

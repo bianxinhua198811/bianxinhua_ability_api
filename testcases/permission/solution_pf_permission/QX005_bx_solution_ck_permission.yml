@@ -5,7 +5,7 @@ teststeps:
 
 -   name: 评分权限人员18200000005查看问题-审核问题
     output:
-        qid: qid
+        - qid
     testcase: testcases/permission/ques_pf_permission/QX001_pf_permission.yml
     extract:
         qid: content.data.questions.0.id

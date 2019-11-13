@@ -1,10 +1,10 @@
 name: /login
 variables:
     phone: ${ENV(jjphone)}
-output:
-    cookies: cookies
-teardown_hooks:
-        - ${teardown_hook_get_cookie($response)}
+#teardown_hooks:
+#        - ${teardown_hook_get_cookie($response)}
+export:
+        - cookies
 request:
     data:
         _token: GUgfiwG0Y1iIPKxPhwUqmN9hmRL55m8Ay9QjzRvm

@@ -6,7 +6,7 @@ config:
         solve_user_id: '3218698329093888'
         solve_partners: '3220143165728256'
     output:
-        cookies: cookies
+        - cookies
 teststeps:
 -   name: 18200000003登录后台管理系统：/login
     request:

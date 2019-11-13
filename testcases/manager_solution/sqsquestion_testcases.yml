@@ -3,7 +3,7 @@ config:
     variables:
         phone: ${ENV(jjphone)}
     output:
-        cookies: cookies
+        - cookies
 teststeps:
 -   name: 18200000006登陆/login
     request:

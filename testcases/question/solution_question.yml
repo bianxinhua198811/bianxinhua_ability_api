@@ -1,7 +1,7 @@
 config:
     name: 通过后台管理系统解决问题
     output:
-        qid: qid
+        - qid
 
 teststeps:
 
@@ -19,7 +19,7 @@ teststeps:
 
 -   name: 18200000005查看待我审核
     output:
-        qid: qid
+        - qid
     api: api/question_api/audits_api.yml
     extract:
         qid: content.data.questions.0.id

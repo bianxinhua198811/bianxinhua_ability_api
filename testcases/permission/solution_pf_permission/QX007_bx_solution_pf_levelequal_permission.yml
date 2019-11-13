@@ -5,7 +5,7 @@ teststeps:
 
 -   name: 评分权限人员18200000005查看问题-审核问题
     output:
-        qid: qid
+        - qid
     testcase: testcases/permission/ques_pf_permission/QX001_pf_permission.yml
     extract:
         qid: content.data.questions.0.id
@@ -29,7 +29,7 @@ teststeps:
 
 -   name: 有评分权限18200000002查看备选方案详情
     output:
-        sid: sid
+        - sid
     api: api/question_api/alternatives_api.yml
     extract:
         sid: content.data.solutions.0.id

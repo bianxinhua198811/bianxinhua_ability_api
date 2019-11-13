@@ -19,7 +19,7 @@ teststeps:
 
 -   name: 解决权限人员18200001003查看问题详情
     output:
-        sid: sid
+        - sid
     api: api/question_api/questiondetail_api.yml
     extract:
         sid: content.data.question.solutions.0.id
