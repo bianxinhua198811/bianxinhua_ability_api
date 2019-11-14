@@ -187,3 +187,18 @@ def get_solveid(qid):
         # 发生错误时回滚
         db.rollback()
     db.close()
+
+
+def isnull(response):
+    jsondata= json.loads(response.content)
+    if len(jsondata['data']['lists']) == 0:
+        return 0
+    else :
+        return jsondata['data']['lists'][0]['id']
+
+# def isnull(content):
+#     print(content)
+#     if len(content['lists']) == 0:
+#         return 0
+#     else :
+#         return content['lists'][0]['id']

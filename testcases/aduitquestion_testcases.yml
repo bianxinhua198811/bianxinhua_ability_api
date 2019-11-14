@@ -1,0 +1,24 @@
+config:
+    name: 提问审核问题
+#    output:
+#        qid: qid
+teststeps:
+-   name: A登陆发布提问
+    testcase: testcases/question/add_question.yml
+    variables:
+      phone: ${ENV(sxtwphone)}
+      relatedDepsid: 171
+
+-   name: B登陆
+    testcase: testcases/login_testcases.yml
+    variables:
+        phone: ${ENV(sxpfphone)}
+        password: ${ENV(password)}
+
+-   name: B进入待我审核页面
+    api: api/question_api/audits_api.yml
+    extract:
+        qid: content.data.questions.0.id
+
+-   name: B审核该问题
+    api: api/question_api/auditquestion_api.yml
