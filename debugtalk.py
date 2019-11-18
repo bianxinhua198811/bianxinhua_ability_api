@@ -136,6 +136,14 @@ def setup_hook_clean_db():
         cursor.execute("delete from user_msg where uid in (select uid from user_info where company_id=42)")
         # 删除用户同感表
         cursor.execute("delete from user_sympathy where uid in (select uid from user_info where company_id=42)")
+        # 删除问题标记表
+        cursor.execute("delete from question_marks where uid in (select uid from user_info where company_id=42)")
+        # 删除问题标记结果表
+        cursor.execute("delete from question_marks_result where uid in (select uid from user_info where company_id=42)")
+        # 删除用户提交表
+        cursor.execute("delete from user_commit where uid in (select uid from user_info where company_id=42)")
+        # 删除问题提交表
+        cursor.execute("delete a from question_commit a LEFT JOIN user_commit b on a.commitId =b.id LEFT JOIN user_info c on b.uid =c.uid where c.company_id =42")
         db.commit()
         print("delete OK")
     except:
@@ -195,10 +203,40 @@ def isnull(response):
         return 0
     else :
         return jsondata['data']['lists'][0]['id']
-
+#以下与前面为同一方法
 # def isnull(content):
 #     print(content)
 #     if len(content['lists']) == 0:
 #         return 0
 #     else :
 #         return content['lists'][0]['id']
+
+
+def qGrade(data):
+    """
+       判断是否有qGrade=0的问题
+       :param x:
+       :param y:
+       :return:
+   """
+    xlen = len(data['lists'])
+    i = 0
+    count = 0
+    for i in range(xlen):
+        if data['lists'][i]['qGrade'] == 0:
+            count=count + 1
+        i = i+1
+    if count == 0:
+        return 1
+    else:
+        return 0
+
+
+def len_list(response):
+    # 计算返回的列表数组长度
+    xlen = 0
+    jsondata = json.loads(response.content)
+    xlen = len(jsondata['data']['lists'])
+    return xlen
+
+
