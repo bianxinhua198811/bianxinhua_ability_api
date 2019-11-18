@@ -1,0 +1,16 @@
+config:
+    name: SX004：部门长登陆有问题筛选模块
+
+teststeps:
+-   name: 部门长登陆
+    testcase: testcases/login_testcases.yml
+    variables:
+        phone: ${ENV(bossphone1)}
+
+
+-   name: 获取用户信息
+    api: api/user_api/userInfo_api.yml
+    validate:
+      - eq:
+          - content.data.user.filterModule
+          - 3

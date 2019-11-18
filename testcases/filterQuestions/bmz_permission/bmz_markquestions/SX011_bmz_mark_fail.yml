@@ -1,0 +1,40 @@
+config:
+    name: SX011：部门长标记问题失败
+
+teststeps:
+-   name: 提问审核问题
+    testcase: testcases/aduitquestion_testcases.yml
+    output:
+        qid: qid
+
+-   name: 部门长C登陆
+    testcase: testcases/login_testcases.yml
+    variables:
+        phone: ${ENV(bmzphone1)}
+        sign: ${make_sign($currtime, $uuid, $access_token)}
+        uuid: ${make_uuid()}
+        currtime: ${make_time()}
+        access_token: ''
+
+-   name: 部门长C进入【标记】模块
+    api: api/filterquestion_api/unmarkedQuestions_api.yml
+    validate:
+        -  eq:
+             - content.data.lists.0.id
+             - $qid
+
+-   name: 部门长C标记问题为非1.2级
+    variables:
+        feasibility: 2
+        importance: 2
+        urgency: 4
+        access_token: ${get_accesstoken()}
+        sign: ${make_sign($currtime, $uuid, $access_token)}
+        uuid: ${make_uuid()}
+        currtime: ${make_time()}
+    api: api/filterquestion_api/markquestion_api.yml
+    #当前接口未限制维度为必填
+    validate:
+        -  contains:
+             - content.msg
+             - 成功

@@ -1,0 +1,45 @@
+config:
+    name: SX014：部门长将标记过问题0级调整为1
+
+teststeps:
+-   name: 提问审核问题
+    testcase: testcases/aduitquestion_testcases.yml
+    output:
+        qid: qid
+
+-   name: 部门长C登陆
+    testcase: testcases/login_testcases.yml
+    variables:
+        phone: ${ENV(bmzphone1)}
+        sign: ${make_sign($currtime, $uuid, $access_token)}
+        uuid: ${make_uuid()}
+        currtime: ${make_time()}
+        access_token: ''
+
+-   name: 部门长C进入【标记】模块
+    api: api/filterquestion_api/unmarkedQuestions_api.yml
+
+-   name: 部门长C标记问题为0级
+    api: api/filterquestion_api/markquestion_api.yml
+    variables:
+        access_token: ${get_accesstoken()}
+        sign: ${make_sign($currtime, $uuid, $access_token)}
+        uuid: ${make_uuid()}
+        currtime: ${make_time()}
+        feasibility: 2
+        importance: 2
+        urgency: 2
+
+-   name: 部门长C进入【调整】模块
+    api: api/filterquestion_api/jurisdictionMarkedQuestions_api.yml
+
+-   name: 将问题调整为1级
+    api: api/filterquestion_api/markquestion_api.yml
+    variables:
+        feasibility: 1
+        importance: 1
+        urgency: 1
+    validate:
+      - eq:
+          - content.data.currObj.qGrade
+          - 1

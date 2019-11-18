@@ -1,0 +1,24 @@
+config:
+    name: SX005：对本部门有评分权限的A进入【标记】模块查看
+
+teststeps:
+-   name: 提问审核问题
+    testcase: testcases/aduitquestion_testcases.yml
+    output:
+        qid: qid
+
+-   name: 部门长C登陆
+    testcase: testcases/login_testcases.yml
+    variables:
+        phone: ${ENV(bmzphone1)}
+        sign: ${make_sign($currtime, $uuid, $access_token)}
+        uuid: ${make_uuid()}
+        currtime: ${make_time()}
+        access_token: ''
+
+-   name: 部门长C进入【标记】模块
+    api: api/filterquestion_api/unmarkedQuestions_api.yml
+    validate:
+        -  eq:
+             - content.data.lists.0.id
+             - $qid

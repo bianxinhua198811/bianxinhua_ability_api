@@ -1,7 +1,5 @@
 config:
     name: 提问审核问题
-#    output:
-#        qid: qid
 teststeps:
 -   name: A登陆发布提问
     testcase: testcases/question/add_question.yml
@@ -19,6 +17,7 @@ teststeps:
     api: api/question_api/audits_api.yml
     extract:
         qid: content.data.questions.0.id
+
 
 -   name: B审核该问题
     api: api/question_api/auditquestion_api.yml

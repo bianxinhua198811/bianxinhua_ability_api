@@ -1,0 +1,37 @@
+name: 标记问题
+variables:
+    sign: ${make_sign($currtime, $uuid, $access_token)}
+    uuid: ${make_uuid()}
+    currtime: ${make_time()}
+    access_token: ${get_accesstoken()}
+    feasibility: 1
+    importance: 1
+    urgency: 1
+    qid: 3223649955254528
+base_url: ${ENV(base_url)}
+request:
+    headers:
+        Content-Type: application/json;charset=utf-8
+        User-Agent: okhttp/3.12.3
+        X-MMM-AccessToken: $access_token
+        X-MMM-AppName: com.mmm.ability
+        X-MMM-AppProject: ability
+        X-MMM-DeviceType: '1'
+        X-MMM-Sign: $sign
+        X-MMM-Timestamp: $currtime
+        X-MMM-Uuid: $uuid
+        X-MMM-Version: 0.6.1
+    json:
+        feasibility: $feasibility
+        importance: $importance
+        qid: $qid
+        urgency: $urgency
+    method: POST
+    url: /v1/question/mark
+validate:
+-   eq:
+    - content.code
+    - 0
+-   eq:
+    - content.msg
+    - 标记问题成功

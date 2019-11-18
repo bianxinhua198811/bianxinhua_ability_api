@@ -1,0 +1,44 @@
+config:
+    name: SX019：部门长提交筛选后无法再次进入【筛选】模块
+
+teststeps:
+-   name: 提问审核问题1
+    testcase: testcases/aduitquestion_testcases.yml
+
+-   name: 部门长C登陆
+    testcase: testcases/login_testcases.yml
+    variables:
+        phone: ${ENV(bmzphone1)}
+        sign: ${make_sign($currtime, $uuid, $access_token)}
+        uuid: ${make_uuid()}
+        currtime: ${make_time()}
+        access_token: ''
+
+-   name: 部门长C进入【标记】模块
+    api: api/filterquestion_api/unmarkedQuestions_api.yml
+    extract:
+      - qid: content.data.lists.0.id
+
+-   name: 部门长C标记问题为1级
+    api: api/filterquestion_api/markquestion_api.yml
+    variables:
+        access_token: ${get_accesstoken()}
+        sign: ${make_sign($currtime, $uuid, $access_token)}
+        uuid: ${make_uuid()}
+        currtime: ${make_time()}
+        qid: $qid
+
+-   name: 提交筛选结果
+    api: api/filterquestion_api/submitFilterQuestions_api.yml
+    variables:
+      - qids: $qid
+
+-   name: 再次进入【筛选】模块
+    api: api/filterquestion_api/inQuestionPool_api.yml
+    validate:
+      - eq:
+          - content.code
+          - 4070
+      - eq:
+          - content.msg
+          - 你已提交问题，请到历史筛选查看筛选结果
