@@ -3,13 +3,19 @@
 # @File     :db_wrap.py
 import pymysql
 
+db_config ={"host": "115.29.205.99",
+            "port": 3306,
+            "user": "shiqiurong",
+            "password": "QGaBlwXT123dfvc7ip",
+            "db": "ability_display",
+            "charset": 'utf8'}
 
 def setup_hook_clean_db():
     """
     初始化时清理数据库中的历史数据
     :return:
     """
-    db = pymysql.connect(host="115.29.205.99",port=3306,user="shiqiurong", password="QGaBlwXT123dfvc7ip",db= "ability_display",charset='utf8')
+    db = pymysql.connect(**db_config)
     cursor = db.cursor()
     try:
         #删除评论
@@ -55,8 +61,7 @@ def setup_hook_clean_db():
 
 def get_solveid(qid):
     #根据问题id，查询相应的解决申请表id
-    db = pymysql.connect(host="115.29.205.99", port=3306, user="shiqiurong", password="QGaBlwXT123dfvc7ip",
-                         db="ability_display", charset='utf8')
+    db = pymysql.connect(**db_config)
     cursor = db.cursor()
     try:
         cursor.execute('select id from user_question_solve where qid = %s',qid)
