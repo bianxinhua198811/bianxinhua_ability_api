@@ -1,6 +1,6 @@
 # @Time     :2019/11/26 11:30
 # @Author   :dengyuting
-# @File     :time_wrap.py
+# @File     :time_func.py
 import paramiko
 
 ssh_config = {

@@ -22,7 +22,7 @@ testcases:
 -   name: 参数化demo
     testcase: testcases/question/add_question.yml
     parameters:
-        title-content: ${P(config/title_content_msg.csv)}
+        title-content: ${P(data/title_content_msg.csv)}
 
 
 

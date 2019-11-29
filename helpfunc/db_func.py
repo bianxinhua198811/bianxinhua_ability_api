@@ -1,6 +1,6 @@
 # @Time     :2019/11/26 11:25
 # @Author   :dengyuting
-# @File     :db_wrap.py
+# @File     :db_func.py
 import pymysql
 
 db_config ={"host": "115.29.205.99",

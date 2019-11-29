@@ -1,9 +1,9 @@
 import json
 import time
-from wrapper.db_wrap import *
-from wrapper.login_wrap import *
-from wrapper.header_wrap import *
-from wrapper.time_wrap import *
+from helpfunc.db_func import *
+from helpfunc.header_func import *
+from helpfunc.login_func import *
+from helpfunc.time_func import *
 
 
 def sleep(n_secs):

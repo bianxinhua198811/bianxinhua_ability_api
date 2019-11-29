@@ -1,6 +1,6 @@
 # @Time     :2019/11/26 11:24
 # @Author   :dengyuting
-# @File     :header_wrap.py
+# @File     :header_func.py
 import hashlib
 import time
 import uuid
