@@ -13,8 +13,8 @@ testcases:
 -   name: 测试用例2
     testcase: testcases/permission/ques_pf_permission/QX002_pf_levelequal_permission.yml
 
-#-   name: 测试用例3
-#    testcase: testcases/permission/ques_pf_permission/pf_levelhigh_permission.yml
+-   name: 测试用例3
+    testcase: testcases/permission/ques_pf_permission/QX003_pf_levelhigh_permission.yml
 #
 #-   name: 测试用例4
 #    testcase: testcases/permission/ques_pf_permission/pf_permission.yml
