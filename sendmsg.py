@@ -35,7 +35,9 @@ def sendinfo():
     data = {}
     data['msgtype'] = 'text'
     data['text'] = {}
-    data['text']['content'] = '【ability接口自动化测试-测试环境】 \n 构建人：' +BUILD_USER+ '\n 测试执行结果：'+r[0]+ '\n TOTAL：' +str(r[1]) +'\n SUCCESS:' +str(r[2])+ '\n FAIL:' +str(r[3])+ '\n测试报告地址：XXXXXXXX \n'
+    data['text']['content'] = '【ability接口自动化测试-测试环境】 \n 构建人：' +BUILD_USER+ \
+                              '\n 测试执行结果：'+r[0]+ '\n TOTAL：' +str(r[1]) +'\n SUCCESS:' +str(r[2])+ '\n FAIL:' +str(r[3])+ \
+                              '\n 查看控制台：' +BUILD_URL+'console \n 测试报告地址：XXXXXXXX \n'
     # data['text']['mentioned_mobile_list'] = ["13559112969","@all"]
 
     url = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b8028a75-89ff-4dc4-a1a7-6d8e3fd44552'

@@ -1,48 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b869bb6c-d2b2-46af-b73c-cd3237c48651" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ability_api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/department_api/1_getdepartment_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/firstpage_api/addquestion_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/firstpage_api/announcement_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/firstpage_api/bossFootprints_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/firstpage_api/searchAll_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/login_api/1_login_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/login_api/2_accessToken_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/login_api/8_gettimestamp_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/login_api/9_updatedevice_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/message_api/msgannouncements_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/message_api/msgstatistics_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/question_api/applyForQuestions_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/question_api/auditquestion_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/question_api/audits_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/question_api/questiondetail_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/upload_api/uploadimage_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/upload_api/uploadvoice_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/user_api/userInfo_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/accessToken.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/authCode.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/title_content_msg.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/debugtalk.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/ck_login_testcases.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/permission/ck_permission.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/permission/pf_levelhigh_permission.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/permission/pf_permission.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/permission/pf_permission_bak.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/pf_login_testcases.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/question/add_question.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/tw_login_testcases.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsuites/ability_testsuite.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsuites/auditsquestion/auditsquestion_suite.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsuites/permission/ability_suites.yml" afterDir="false" />
+    <list default="true" id="b869bb6c-d2b2-46af-b73c-cd3237c48651" name="Default Changelist" comment="优化测试用例">
+      <change afterPath="$PROJECT_DIR$/common/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ability_api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ability_api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/accessToken.csv" beforeDir="false" afterPath="$PROJECT_DIR$/config/accessToken.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/authCode.csv" beforeDir="false" afterPath="$PROJECT_DIR$/config/authCode.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sendmsg.py" beforeDir="false" afterPath="$PROJECT_DIR$/sendmsg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/bmz_permission/bmz_unmarkedquestions/SX006_bmz_ck.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/filterQuestions/bmz_permission/bmz_unmarkedquestions/SX006_bmz_ck.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/login_testcases.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/login_testcases.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,19 +36,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\PycharmProjects\ability_api\testsuites\permission" />
-      <recent name="F:\PycharmProjects\ability_api\testcases\question" />
-      <recent name="F:\PycharmProjects\ability_api\api\department_api" />
-      <recent name="F:\PycharmProjects\ability_api\api\message_api" />
-      <recent name="F:\PycharmProjects\ability_api\api\firstpage_api" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\PycharmProjects\ability_api\testcases" />
-      <recent name="F:\PycharmProjects\ability_api\testcases\permission" />
+      <recent name="F:\PycharmProjects\ability_api" />
+      <recent name="F:\PycharmProjects\ability_api\flask_demo\conf" />
+      <recent name="F:\PycharmProjects\ability_api\testcases_excel" />
+      <recent name="F:\PycharmProjects\ability_api\testcases\question\question_all" />
       <recent name="F:\PycharmProjects\ability_api\api\question_api" />
-      <recent name="F:\PycharmProjects\ability_api\testcases\question" />
-      <recent name="F:\PycharmProjects\ability_api\api\login_api" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\PycharmProjects\ability_api\data" />
+      <recent name="F:\PycharmProjects\ability_api\common" />
+      <recent name="F:\PycharmProjects\ability_api\testcases\firstpage_Statistics\pf_statistics" />
+      <recent name="F:\PycharmProjects\ability_api\testcases\firstpage_Statistics\ck_statistic" />
+      <recent name="F:\PycharmProjects\ability_api\api\manager_api" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -94,8 +63,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="debugtalk" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.sendmsg">
+    <configuration name="csv_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ability_api" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_demo/csv_demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="robot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ability_api" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -107,7 +97,70 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/debugtalk.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/robot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sendmsg" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ability_api" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sendmsg.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tds_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ability_api" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_demo/tds_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tds_test1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ability_api" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_demo/tds_test1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -118,7 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.debugtalk" />
+        <item itemvalue="Python.sendmsg" />
+        <item itemvalue="Python.robot" />
+        <item itemvalue="Python.tds_test1" />
+        <item itemvalue="Python.tds_test" />
+        <item itemvalue="Python.csv_demo" />
       </list>
     </recent_temporary>
   </component>
@@ -133,21 +190,216 @@
       <option name="presentableId" value="Default" />
       <updated>1569307505769</updated>
     </task>
+    <task id="LOCAL-00001" summary="优化测试用例">
+      <created>1571644787323</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571644787323</updated>
+    </task>
+    <task id="LOCAL-00002" summary="更新评分权限、解决方案权限">
+      <created>1571652504595</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571652504595</updated>
+    </task>
+    <task id="LOCAL-00003" summary="增加后台管理系统解决问题用例">
+      <created>1571733685078</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571733685078</updated>
+    </task>
+    <task id="LOCAL-00004" summary="增加清理数据库方法">
+      <created>1571735711678</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571735711678</updated>
+    </task>
+    <task id="LOCAL-00005" summary="增加删除用户信息表和星数变动表的相关数据">
+      <created>1571795831220</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1571795831220</updated>
+    </task>
+    <task id="LOCAL-00006" summary="修正solution单词错误">
+      <created>1571822900342</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571822900342</updated>
+    </task>
+    <task id="LOCAL-00007" summary="修改权限校验用例">
+      <created>1571823875440</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571823875440</updated>
+    </task>
+    <task id="LOCAL-00008" summary="增加备选方案评分权限校验&#10;增加解决方案评分权限校验">
+      <created>1571887882531</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1571887882531</updated>
+    </task>
+    <task id="LOCAL-00009" summary="修改测试策略：改为每次执行用例集前，初始化数据库">
+      <created>1571898282448</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1571898282448</updated>
+    </task>
+    <task id="LOCAL-00010" summary="增加首页“已解决”“未解决”测试用例，todo">
+      <created>1571909069550</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1571909069550</updated>
+    </task>
+    <task id="LOCAL-00011" summary="查看权限人员：已解决、未解决、解决中、总提问数量校验">
+      <created>1571968124444</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1571968124444</updated>
+    </task>
+    <task id="LOCAL-00012" summary="评分权限人员：已解决、未解决、解决中、总提问数量校验">
+      <created>1571972410540</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1571972410540</updated>
+    </task>
+    <task id="LOCAL-00013" summary="增加首页：已解决、解决中、未解决列表翻页校验">
+      <created>1571988166842</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1571988166842</updated>
+    </task>
+    <task id="LOCAL-00014" summary="修正文件名错误问题">
+      <created>1573027546501</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1573027546501</updated>
+    </task>
+    <task id="LOCAL-00015" summary="新增测试用例excel">
+      <created>1573030348571</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1573030348571</updated>
+    </task>
+    <task id="LOCAL-00016" summary="增加测试用例编号">
+      <created>1573031162159</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1573031162159</updated>
+    </task>
+    <task id="LOCAL-00017" summary="增加测试用例编号">
+      <created>1573032349822</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1573032349822</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix">
+      <created>1573631165257</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1573631165257</updated>
+    </task>
+    <task id="LOCAL-00019" summary="修改debugtalk，将函数分类写在对应的wrapper文件夹中">
+      <created>1574739413299</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1574739413299</updated>
+    </task>
+    <task id="LOCAL-00020" summary="优化测试用例">
+      <created>1574739665177</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1574739665177</updated>
+    </task>
+    <task id="LOCAL-00021" summary="修改time_wrap">
+      <created>1574739895653</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1574739895653</updated>
+    </task>
+    <task id="LOCAL-00022" summary="test">
+      <created>1575021464060</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1575021464061</updated>
+    </task>
+    <task id="LOCAL-00023" summary="test">
+      <created>1575535172659</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1575535172659</updated>
+    </task>
+    <task id="LOCAL-00024" summary="test">
+      <created>1575536664531</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1575536664531</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.yml" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.tml" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="更新评分权限、解决方案权限" />
+    <MESSAGE value="增加后台管理系统解决问题用例" />
+    <MESSAGE value="增加清理数据库方法" />
+    <MESSAGE value="增加删除用户信息表和星数变动表的相关数据" />
+    <MESSAGE value="修正solution单词错误" />
+    <MESSAGE value="修改权限校验用例" />
+    <MESSAGE value="增加备选方案评分权限校验&#10;增加解决方案评分权限校验" />
+    <MESSAGE value="修改测试策略：改为每次执行用例集前，初始化数据库" />
+    <MESSAGE value="增加首页“已解决”“未解决”测试用例，todo" />
+    <MESSAGE value="查看权限人员：已解决、未解决、解决中、总提问数量校验" />
+    <MESSAGE value="评分权限人员：已解决、未解决、解决中、总提问数量校验" />
+    <MESSAGE value="增加首页：已解决、解决中、未解决列表翻页校验" />
+    <MESSAGE value="修正文件名错误问题" />
+    <MESSAGE value="新增测试用例excel" />
+    <MESSAGE value="增加测试用例编号" />
+    <MESSAGE value="fix" />
+    <MESSAGE value="修改debugtalk，将函数分类写在对应的wrapper文件夹中" />
+    <MESSAGE value="优化测试用例" />
+    <MESSAGE value="修改time_wrap" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>

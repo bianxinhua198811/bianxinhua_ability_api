@@ -14,3 +14,10 @@ teststeps:
     api: api/login_api/2_accessToken_api.yml
     teardown_hooks:
         - ${teardown_hook_get_accesstoken($response)}
+#    validate:
+#        - eq:
+#              - content.code
+#              - 0
+#        - eq:
+#              - content.msg
+#              - 获取全部部门列表成功
