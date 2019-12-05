@@ -8,16 +8,16 @@ testcases:
     testcase: testcases/start_testcases.yml
 
 -   name: 测试用例1
-    testcase: testcases/permission/ques_pf_permission/ck_permission.yml
+    testcase: testcases/permission/ques_pf_permission/QX001_pf_permission.yml
 
 -   name: 测试用例2
-    testcase: testcases/permission/ques_pf_permission/pf_levelequal_permission.yml
+    testcase: testcases/permission/ques_pf_permission/QX002_pf_levelequal_permission.yml
 
--   name: 测试用例3
-    testcase: testcases/permission/ques_pf_permission/pf_levelhigh_permission.yml
-
--   name: 测试用例4
-    testcase: testcases/permission/ques_pf_permission/pf_permission.yml
+#-   name: 测试用例3
+#    testcase: testcases/permission/ques_pf_permission/pf_levelhigh_permission.yml
+#
+#-   name: 测试用例4
+#    testcase: testcases/permission/ques_pf_permission/pf_permission.yml
 
 -   name: 参数化demo
     testcase: testcases/question/add_question.yml
