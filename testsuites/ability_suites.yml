@@ -15,9 +15,12 @@ testcases:
 
 -   name: 测试用例3
     testcase: testcases/permission/ques_pf_permission/QX003_pf_levelhigh_permission.yml
-#
-#-   name: 测试用例4
-#    testcase: testcases/permission/ques_pf_permission/pf_permission.yml
+
+-   name: 测试用例4
+    testcase: testcases/permission/ques_pf_permission/QX004_ck_permission.yml
+
+-   name: 测试用例5
+    testcase: testcases/permission/solution_pf_permission/QX005_bx_solution_ck_permission.yml
 
 -   name: 参数化demo
     testcase: testcases/question/add_question.yml

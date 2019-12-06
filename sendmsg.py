@@ -36,7 +36,7 @@ def sendinfo():
     data = {}
     data['msgtype'] = 'text'
     data['text'] = {}
-    data['text']['content'] = '【ability接口自动化测试-测试环境】\n 测试执行结果：'+r[0]+ \
+    data['text']['content'] = '【'+JOB_NAME+'】\n 测试执行结果：'+r[0]+ \
                               '\n TOTAL：' +str(r[1]) +'\n SUCCESS：' +str(r[2])+ '\n FAIL：' +str(r[3])+ \
                               '\n 查看控制台：' +BUILD_URL+'console \n 测试报告地址：' +JOB_URL+'Ability_20Test_20Report/ \n'
     # data['text']['mentioned_mobile_list'] = ["13559112969","@all"]
