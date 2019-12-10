@@ -6,6 +6,10 @@ import json
 import requests
 import os
 
+"""
+jenkins通知测试执行结果
+"""
+
 JENKINS_URL = str(os.getenv("JENKINS_URL"))
 BUILD_NUMBER = str(os.getenv("BUILD_NUMBER"))
 JOB_NAME = str(os.getenv("JOB_NAME"))
