@@ -27,11 +27,13 @@ def getresult():
             jsonfile = json.loads(f)
             if jsonfile["success"] == True:
                 result = "SUCCESS"
-                total = jsonfile["stat"]["testcases"]["total"]
-                success = jsonfile["stat"]["testcases"]["success"]
-                fail = jsonfile["stat"]["testcases"]["fail"]
-                teststeps = jsonfile["stat"]["teststeps"]
-                return result, total, success, fail, teststeps
+            else:
+                result = "FAIL"
+            total = jsonfile["stat"]["testcases"]["total"]
+            success = jsonfile["stat"]["testcases"]["success"]
+            fail = jsonfile["stat"]["testcases"]["fail"]
+            teststeps = jsonfile["stat"]["teststeps"]
+            return result, total, success, fail, teststeps
     except Exception as err:
         print("this is err:{}" .format(err))
 
