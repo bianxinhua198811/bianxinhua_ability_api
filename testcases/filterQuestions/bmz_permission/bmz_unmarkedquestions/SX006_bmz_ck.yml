@@ -29,9 +29,9 @@ teststeps:
     -   eq:
         - content.msg
         - 获取未标记的问题列表成功
-'''
-如下为不使用teardown_hooks判断的方法
-'''
+#'''
+#如下为不使用teardown_hooks判断的方法
+#'''
 #-   name: 部门长C进入【标记】模块
 #    api: api/filterquestion_api/unmarkedQuestions_api.yml
 #    extract:
