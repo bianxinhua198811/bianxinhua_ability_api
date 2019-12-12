@@ -39,7 +39,7 @@ teststeps:
     api: api/question_api/solutiondetails_api.yml
 
 -   name: C给备选方案评分
-    api: api/question_api/scoreAnalyze_api.yml
+    api: api/question_api/scoreanalyze_api.yml
 
 -   name: B登陆
     testcase: testcases/login_testcases.yml
