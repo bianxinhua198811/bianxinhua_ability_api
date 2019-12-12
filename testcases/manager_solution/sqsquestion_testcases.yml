@@ -1,11 +1,11 @@
 config:
     name: 解除申请
     variables:
-        phone: ${ENV(jjphone)}
+        phone: ${ENV(adminphone)}
     output:
         - cookies
 teststeps:
--   name: 18200000006登陆/login
+-   name: 18000000000登陆/login
     request:
         data:
             _token: aXoN6NHdBGOXOk2wplttIgE5tzOC5bhMeUkPUHpl
@@ -35,14 +35,9 @@ teststeps:
         params:
             id: ${get_solveid($qid)}
             qid: $qid
+            reason: 理由${get_nowtime()}
         url: http://ability-mg-test.fjmaimaimai.com/question_sqs/unset-sq
     validate:
-    -   eq:
-        - status_code
-        - 200
-    -   eq:
-        - headers.Content-Type
-        - application/json
     -   eq:
         - content.code
         - 0
