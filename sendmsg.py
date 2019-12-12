@@ -32,8 +32,13 @@ def getresult():
             total = jsonfile["stat"]["testcases"]["total"]
             success = jsonfile["stat"]["testcases"]["success"]
             fail = jsonfile["stat"]["testcases"]["fail"]
-            teststeps = jsonfile["stat"]["teststeps"]
-            return result, total, success, fail, teststeps
+            duration = round(jsonfile["time"]["duration"])
+            # teststeps_total = jsonfile["stat"]["teststeps"]["total"]
+            # teststeps_successes = jsonfile["stat"]["teststeps"]["successes"]
+            # teststeps_failures = jsonfile["stat"]["teststeps"]["failures"]
+            # teststeps_errors = jsonfile["stat"]["teststeps"]["errors"]
+            # teststeps_skipped = jsonfile["stat"]["teststeps"]["skipped"]
+            return result, total, success, fail, duration
     except Exception as err:
         print("this is err:{}" .format(err))
 
@@ -43,7 +48,8 @@ def sendinfo():
     data['msgtype'] = 'text'
     data['text'] = {}
     data['text']['content'] = '【'+JOB_NAME+'】\n 测试执行结果：'+r[0]+ \
-                              '\n TOTAL：' +str(r[1]) +'\n SUCCESS：' +str(r[2])+ '\n FAIL：' +str(r[3])+ \
+                              '\n 执行时间：' +str(r[4])+ \
+                              's\n TOTAL：' +str(r[1]) +'\n SUCCESS：' +str(r[2])+ '\n FAIL：' +str(r[3])+ \
                               '\n 查看控制台：' +BUILD_URL+'console \n 测试报告地址：' +JOB_URL+'Ability_20Test_20Report/ \n'
     # data['text']['mentioned_mobile_list'] = ["13559112969","@all"]
 
