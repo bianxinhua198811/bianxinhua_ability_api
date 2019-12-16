@@ -14,7 +14,7 @@ teststeps:
         phone: ${ENV(ckphone)}
 
 -   name: A进入查看星数变动列表
-    api: api\messagecenter_api\msgscorechange_api.yml
+    api: api/messagecenter_api/msgscorechange_api.yml
     variables:
         type: 1
 #0-平台获得、1-额外加分

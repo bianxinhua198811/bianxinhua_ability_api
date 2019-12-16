@@ -39,7 +39,7 @@ teststeps:
         sign: ${make_sign($currtime, $uuid,$access_token)}
 
 -   name: C进入查看星数变动列表
-    api: api\messagecenter_api\msgscorechange_api.yml
+    api: api/messagecenter_api/msgscorechange_api.yml
     validate:
       - eq:
           - content.data.platformFors.0.qid
