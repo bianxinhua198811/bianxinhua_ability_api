@@ -1,7 +1,6 @@
 # @Time     :2019/12/4 9:37
 # @Author   :dengyuting
 # @File     :sendmsg.py
-# -*- coding: utf-8 -*-
 import json
 
 import requests
