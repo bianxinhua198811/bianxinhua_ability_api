@@ -55,19 +55,19 @@ def callen(value) -> int:
     return len(value)
 
 
-def isnull(response):
-    jsondata= json.loads(response.content)
-    if len(jsondata['data']['lists']) == 0:
-        return 0
-    else :
-        return jsondata['data']['lists'][0]['id']
-#以下与前面为同一方法
-# def isnull(content):
-#     print(content)
-#     if len(content['lists']) == 0:
+# def isnull(response):
+#     jsondata= json.loads(response.content)
+#     if len(jsondata['data']['lists']) == 0:
 #         return 0
 #     else :
-#         return content['lists'][0]['id']
+#         return jsondata['data']['lists'][0]['id']
+#以下与前面为同一方法
+def isnull(content):
+    print(content)
+    if len(content['lists']) == 0:
+        return 0
+    else :
+        return content['lists'][0]['id']
 
 
 def qGrade(data):
