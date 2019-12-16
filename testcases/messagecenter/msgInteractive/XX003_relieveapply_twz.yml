@@ -25,7 +25,7 @@ teststeps:
     api: api/question_api/applyForQuestions_api.yml
 
 -   name: 后台登陆解除申请
-    testcase: testcases\manager_solution\sqsquestion_testcases.yml
+    testcase: testcases/manager_solution/sqsquestion_testcases.yml
     variables:
         phone: ${ENV(adminphone)}
         password: ${ENV(password)}
