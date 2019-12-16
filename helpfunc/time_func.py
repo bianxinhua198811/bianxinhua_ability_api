@@ -16,7 +16,7 @@ def set_time(time1):
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     # 连接服务器
     ssh.connect(**ssh_config)
-    cmd = f'date -s "{time1}";hwclock -w'
+#   cmd = f'date -s "{time1}";hwclock -w'
     stdin, stdout, stderr = ssh.exec_command(cmd) #执行命令
     result = stdout.read() or stderr.read()
     ssh.close()
