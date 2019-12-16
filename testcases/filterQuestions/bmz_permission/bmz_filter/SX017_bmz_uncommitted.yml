@@ -29,12 +29,14 @@ teststeps:
         currtime: ${make_time()}
 
 -   name: 进入历史筛选模块，筛选当前月份结果
-    teardown_hooks:
-        - ${len_list($response)}
+#    teardown_hooks:
+#        - ${len_list($response)}
     api: api/filterquestion_api/historyQuestionPools_api.yml
+    extract:
+        data: content.data
     variables:
          action: 1
     validate:
         - less_than:
-            - ${len_list($response)}
+            - ${len_list($data)}
             - 1

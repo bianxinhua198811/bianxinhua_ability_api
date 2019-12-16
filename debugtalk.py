@@ -93,7 +93,7 @@ def qGrade(data):
 def len_list(response):
     # 计算返回的列表数组长度
     xlen = 0
-    jsondata = json.loads(response.content)
-    xlen = len(jsondata['data']['lists'])
+    # jsondata = json.loads(response.content)
+    xlen = len(response['lists'])
     return xlen
 
