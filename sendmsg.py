@@ -18,13 +18,14 @@ BUILD_URL = str(os.getenv("BUILD_URL"))
 JOB_URL = str(os.getenv("JOB_URL"))
 
 path = os.path.dirname(__file__)
-summary_file = os.path.join(path, 'logs', 'testsuites', 'ability_suites.summary.json')
+summary_file = os.path.join(path, 'logs', '1_login_api.summary.json')
 
 def getresult():
     try:
         with open(summary_file, 'rb') as f:
-            f = f.read()
-            jsonfile = json.loads(f)
+            # f = f.read()
+            jsonfile = json.loads(f.read())
+            print(type(jsonfile))
             if jsonfile["success"] == True:
                 result = "SUCCESS"
             else:
@@ -42,6 +43,8 @@ def getresult():
     except Exception as err:
         print("this is err:{}" .format(err))
 
+getresult()
+
 def sendinfo():
     r =getresult()
     data = {}
@@ -58,7 +61,7 @@ def sendinfo():
 
     requests.post(url, json=data, headers=headers)
 
-if __name__ == '__main__':
-    sendinfo()
+# if __name__ == '__main__':
+#     sendinfo()
 
 
