@@ -18,7 +18,7 @@ BUILD_URL = str(os.getenv("BUILD_URL"))
 JOB_URL = str(os.getenv("JOB_URL"))
 
 path = os.path.dirname(__file__)
-summary_file = os.path.join(path, 'logs', 'ability_suites.summary.json')
+summary_file = os.path.join(path, 'logs', 'testsuites', 'ability_suites.summary.json')
 
 def getresult():
     try:
