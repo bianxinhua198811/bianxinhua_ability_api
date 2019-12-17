@@ -18,14 +18,13 @@ BUILD_URL = str(os.getenv("BUILD_URL"))
 JOB_URL = str(os.getenv("JOB_URL"))
 
 path = os.path.dirname(__file__)
-summary_file = os.path.join(path, 'logs', 'testsuites','ability_suites.summary.json')
+summary_file = os.path.join(path, 'logs','testsuites','ability_suites.summary.json')
 
 def getresult():
     try:
-        with open(summary_file, 'rb') as f:
-            # f = f.read()
-            jsonfile = json.loads(f.read())
-            print(type(jsonfile))
+        with open(summary_file, 'r') as f:
+            f = f.read()
+            jsonfile = json.loads(f)
             if jsonfile["success"] == True:
                 result = "SUCCESS"
             else:
@@ -47,6 +46,7 @@ def getresult():
 
 def sendinfo():
     r =getresult()
+    print(type(r))
     data = {}
     data['msgtype'] = 'text'
     data['text'] = {}
