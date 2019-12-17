@@ -7,10 +7,10 @@ teststeps:
     output:
         qid: qid
 
--   name: 部门长C登陆
+-   name: 18300000007部门长C登陆
     testcase: testcases/login_testcases.yml
     variables:
-        phone: ${ENV(bmzphone1)}
+        phone: ${ENV(bmzphone3)}
         sign: ${make_sign($currtime, $uuid, $access_token)}
         uuid: ${make_uuid()}
         currtime: ${make_time()}
