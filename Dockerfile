@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 RUN hrun testsuites/ability_suites.yml --save-tests
 
-RUN python sendmsg.py
+CMD [ "python", "sendmsg.py" ]
