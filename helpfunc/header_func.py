@@ -1,10 +1,11 @@
-# @Time     :2019/11/26 11:24
-# @Author   :dengyuting
-# @File     :header_func.py
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+# Date: 2020/4/9 11:23
+# @Author:bxh
+# @file: header_func.py
 import hashlib
 import time
 import uuid
-
 
 def make_time():
     """

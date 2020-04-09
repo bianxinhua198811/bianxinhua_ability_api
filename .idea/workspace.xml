@@ -2,17 +2,218 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b869bb6c-d2b2-46af-b73c-cd3237c48651" name="Default Changelist" comment="test">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/login_api/auth/loginModule_api.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ability_api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ability_api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/accessToken.csv" beforeDir="false" afterPath="$PROJECT_DIR$/config/accessToken.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/department_api/1_getdepartment_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/filterquestion_api/filterMarkedQuestions_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/filterquestion_api/historyQuestionPools_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/filterquestion_api/inQuestionPool_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/filterquestion_api/jurisdictionMarkedQuestions_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/filterquestion_api/markquestion_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/filterquestion_api/submitFilterQuestions_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/filterquestion_api/unmarkedQuestions_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/firstpage_api/addquestion_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/firstpage_api/announcement_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/firstpage_api/bossFootprints_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/firstpage_api/searchAll_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/login_api/1_login_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/login_api/2_accessToken_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/login_api/8_gettimestamp_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/login_api/9_updatedevice_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/manager_api/managerlogin_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/manager_api/solutiommg_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/manager_api/solutionmanager_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/message_api/msgannouncements_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/message_api/msgstatistics_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/messagecenter_api/msginteractive_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/messagecenter_api/msgscorechange_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/question_api/alternatives_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/question_api/applyForQuestions_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/question_api/auditquestion_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/question_api/audits_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/question_api/isolve_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/question_api/questionall_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/question_api/questiondetail_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/question_api/scoreAnalyze_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/question_api/solution_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/question_api/solutiondetails_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/upload_api/uploadimage_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/upload_api/uploadvoice_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/user_api/userInfo_api.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/accessToken.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config/authCode.csv" beforeDir="false" afterPath="$PROJECT_DIR$/config/authCode.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/title_content_msg.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpfunc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/helpfunc/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpfunc/header_func.py" beforeDir="false" afterPath="$PROJECT_DIR$/helpfunc/header_func.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpfunc/login_func.py" beforeDir="false" afterPath="$PROJECT_DIR$/helpfunc/login_func.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/aduitquestion_testcases.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/bmz_permission/bmz_filter/SX015_bmz_filter_qgrade1.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/bmz_permission/bmz_filter/SX017_bmz_uncommitted.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/bmz_permission/bmz_filter/SX018_bmz_commitquestion.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/bmz_permission/bmz_filter/SX019_bmz_committed.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/bmz_permission/bmz_markquestions/SX008_bmz_mark_qgrade1.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/bmz_permission/bmz_markquestions/SX009_bmz_mark_qgrade2.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/bmz_permission/bmz_markquestions/SX010_bmz_mark_qgrade0.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/bmz_permission/bmz_markquestions/SX011_bmz_mark_fail.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/bmz_permission/bmz_markquestions/SX012_bmz_mark_independent.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/bmz_permission/bmz_markquestions/SX013_bmz_adjustqgrade1_0.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/bmz_permission/bmz_markquestions/SX014_bmz_adjustqgrade0_1.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/bmz_permission/bmz_unmarkedquestions/SX005_bmz_pf.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/bmz_permission/bmz_unmarkedquestions/SX006_bmz_ck.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/bmz_permission/bmz_unmarkedquestions/SX007_bmz2_pf.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/filterModulePermission/SX001_others_filterModule.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/filterModulePermission/SX002_bmz_filterModule.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/filterModulePermission/SX003_gg_filterModule.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/filterQuestions/filterModulePermission/SX004_boss_filterModule.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/ck_statistic/ST001_jjz_notdept_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/ck_statistic/ST002_jjz_notme_company_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/ck_statistic/ST003_jjz_notme_dept_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/ck_statistic/ST004_jjz_notme_dept_un_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/ck_statistic/ST005_jjz_notme_notdept_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/ck_statistic/ST006_wjj_notdept_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/ck_statistic/ST007_wjj_notme_company_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/ck_statistic/ST008_wjj_notme_dept_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/ck_statistic/ST009_wjj_notme_dept_un_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/ck_statistic/ST010_wjj_notme_notdept_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/ck_statistic/ST011_yjj_notdept_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/ck_statistic/ST012_yjj_notme_company_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/ck_statistic/ST013_yjj_notme_dept_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/ck_statistic/ST014_yjj_notme_dept_un_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/ck_statistic/ST015_yjj_notme_notdept_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/pf_statistics/ST016_jjz_pf_notdept_check_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/pf_statistics/ST017_jjz_pf_notdept_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/pf_statistics/ST018_jjz_pf_notme_company_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/pf_statistics/ST019_jjz_pf_notme_dept_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/pf_statistics/ST020_jjz_pf_notme_notdept_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/pf_statistics/ST021_jjz_pf_notme_dept_un_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/pf_statistics/ST022_wjj_pf_notdept_check_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/pf_statistics/ST023_wjj_pf_notdept_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/pf_statistics/ST024_wjj_pf_notme_company_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/pf_statistics/ST025_wjj_pf_notme_dept_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/pf_statistics/ST026_wjj_pf_notme_notdept_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/pf_statistics/ST027_wjj_pf_notme_dept_un_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/pf_statistics/ST028_yjj_pf_notdept_check_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/pf_statistics/ST029_yjj_pf_notdept_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/pf_statistics/ST030_yjj_pf_notme_company_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/pf_statistics/ST031_yjj_pf_notme_dept_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/pf_statistics/ST032_yjj_pf_notme_notdept_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/firstpage_Statistics/pf_statistics/ST033_yjj_pf_notme_dept_un_statistics.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/login_testcases.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/manager_solution/bonus_points_testcases.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/manager_solution/managersolution_testcases.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/manager_solution/sqsquestion_testcases.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/messagecenter/msgInteractive/XX001_solve_twz.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/messagecenter/msgInteractive/XX002_apply_twz.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/messagecenter/msgInteractive/XX003_relieveapply_twz.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/messagecenter/msgInteractive/XX004_relieveapply_sqz.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/messagecenter/msgInteractive/XX005_solution_twz.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/messagecenter/msgscorechange/XX006_addquestion.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/messagecenter/msgscorechange/XX007_pf_analyze.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/messagecenter/msgscorechange/XX008_pf_solution_zdr.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/messagecenter/msgscorechange/XX009_pf_solution_cyz.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/messagecenter/msgscorechange/XX010_bonus_points.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/permission/ques_pf_permission/QX001_pf_permission.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/permission/ques_pf_permission/QX002_pf_levelequal_permission.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/permission/ques_pf_permission/QX003_pf_levelhigh_permission.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/permission/ques_pf_permission/QX004_ck_permission.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/permission/solution_pf_permission/QX005_bx_solution_ck_permission.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/permission/solution_pf_permission/QX006_bx_solution_permission.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/permission/solution_pf_permission/QX007_bx_solution_pf_levelequal_permission.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/permission/solution_pf_permission/QX008_bx_solution_pf_levelhigh_permission.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/permission/solution_pf_permission/QX009_bx_solution_pf_permission.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/permission/solution_pf_permission/QX010_jj_solution_permission.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/permission/solution_pf_permission/QX011_jj_solution_jj_permission.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/permission/solution_pf_permission/QX012_jj_solution_jj_levelequal_permission.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/permission/solution_pf_permission/QX013_jj_solution_jj_levelhigh_permission.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/question/add_question.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/question/audit_question.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/question/question_all/jjz_questionall_pagesize.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/question/question_all/wjj_questionall_pagesize.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/question/question_all/yjj_questionall_pagesize.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/question/solution_question.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/start_testcases.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuites/ability_suites.yml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="7" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/login_api/auth/loginModule_api.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helpfunc/header_func.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#108#122#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/helpfunc/db_func.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helpfunc/time_func.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-198" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helpfunc/login_func.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testcases/login_testcases.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -22,28 +223,101 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="bianxinhua" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/helpfunc/header_func.py" />
+        <option value="$PROJECT_DIR$/api/login_api/loginModule_api.yaml" />
+        <option value="$PROJECT_DIR$/api/login_api/auth/updateDevice_api.yaml" />
+        <option value="$PROJECT_DIR$/testcases/login_testcases.yml" />
+        <option value="$PROJECT_DIR$/testcases/login_testcases.yaml" />
+        <option value="$PROJECT_DIR$/api/login_api/auth/loginModule_api.yaml" />
+        <option value="$PROJECT_DIR$/helpfunc/login_func.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="477" />
+    <option name="y" value="-16" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectId" id="1RGy0cbJxXUqydJBLy6eKhLCtup" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ability_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ability_api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ability_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ability_api" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ability_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ability_api" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="login_api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ability_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ability_api" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="login_api" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ability_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ability_api" type="462c0819:PsiDirectoryNode" />
+              <item name="helpfunc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ability_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ability_api" type="462c0819:PsiDirectoryNode" />
+              <item name="testcases" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\mmm-auto\ability_api\api\login_api\auth" />
+      <recent name="F:\PycharmProjects\ability_api\data" />
+      <recent name="F:\PycharmProjects\ability_api\common" />
+      <recent name="F:\PycharmProjects\ability_api\testcases\firstpage_Statistics\pf_statistics" />
+      <recent name="F:\PycharmProjects\ability_api\testcases\firstpage_Statistics\ck_statistic" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\PycharmProjects\ability_api" />
       <recent name="F:\PycharmProjects\ability_api\flask_demo\conf" />
       <recent name="F:\PycharmProjects\ability_api\testcases_excel" />
       <recent name="F:\PycharmProjects\ability_api\testcases\question\question_all" />
       <recent name="F:\PycharmProjects\ability_api\api\question_api" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\PycharmProjects\ability_api\data" />
-      <recent name="F:\PycharmProjects\ability_api\common" />
-      <recent name="F:\PycharmProjects\ability_api\testcases\firstpage_Statistics\pf_statistics" />
-      <recent name="F:\PycharmProjects\ability_api\testcases\firstpage_Statistics\ck_statistic" />
-      <recent name="F:\PycharmProjects\ability_api\api\manager_api" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -71,6 +345,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/robot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -92,6 +367,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -113,6 +389,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sendmsg.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -134,6 +411,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_demo/tds_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -155,6 +433,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_demo/tds_test1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -184,6 +463,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569307505769</updated>
+      <workItem from="1586269949515" duration="456000" />
+      <workItem from="1586270482632" duration="115000" />
+      <workItem from="1586274022683" duration="1213000" />
+      <workItem from="1586339192317" duration="2329000" />
+      <workItem from="1586397538468" duration="1396000" />
+      <workItem from="1586399610082" duration="9198000" />
+      <workItem from="1586434007778" duration="5935000" />
     </task>
     <task id="LOCAL-00001" summary="优化测试用例">
       <created>1571644787323</created>
@@ -440,6 +726,38 @@
     <option name="localTasksCounter" value="37" />
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="20642000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27155825" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.32879046" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.yml" />
@@ -451,14 +769,37 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/HttpRunner" />
+    </ignored-roots>
     <MESSAGE value="更新评分权限、解决方案权限" />
     <MESSAGE value="增加后台管理系统解决问题用例" />
     <MESSAGE value="增加清理数据库方法" />
@@ -482,8 +823,109 @@
     <MESSAGE value="增加已完成的测试用例" />
     <MESSAGE value="修改错误用例" />
     <MESSAGE value="增加执行时间" />
-    <MESSAGE value="test" />
     <MESSAGE value="add Dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Dockerfile" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/api/department_api/1_getdepartment_api.yml" />
+    <entry file="file://$PROJECT_DIR$/api/filterquestion_api/filterMarkedQuestions_api.yml" />
+    <entry file="file://$PROJECT_DIR$/api/filterquestion_api/historyQuestionPools_api.yml" />
+    <entry file="file://$PROJECT_DIR$/api/filterquestion_api/inQuestionPool_api.yml" />
+    <entry file="file://$PROJECT_DIR$/api/filterquestion_api/jurisdictionMarkedQuestions_api.yml" />
+    <entry file="file://$PROJECT_DIR$/api/filterquestion_api/markquestion_api.yml" />
+    <entry file="file://$PROJECT_DIR$/api/filterquestion_api/submitFilterQuestions_api.yml" />
+    <entry file="file://$PROJECT_DIR$/api/filterquestion_api/unmarkedQuestions_api.yml" />
+    <entry file="file://$PROJECT_DIR$/api/user_api/userInfo_api.yml" />
+    <entry file="file://$PROJECT_DIR$/api/login_api/8_gettimestamp_api.yml" />
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/upload_api/uploadimage_api.yml" />
+    <entry file="file://$PROJECT_DIR$/api/login_api/1_login_api.yml" />
+    <entry file="file://$PROJECT_DIR$/data/title_content_msg.csv" />
+    <entry file="file://$PROJECT_DIR$/api/login_api/2_accessToken_api.yml" />
+    <entry file="file://$PROJECT_DIR$/api/firstpage_api/addquestion_api.yml" />
+    <entry file="file://$PROJECT_DIR$/config/accessToken.csv" />
+    <entry file="file://$PROJECT_DIR$/config/authCode.csv" />
+    <entry file="file://$PROJECT_DIR$/testcases/permission/ques_pf_permission/QX001_pf_permission.yml" />
+    <entry file="file://$PROJECT_DIR$/testsuites/ability_suites.yml" />
+    <entry file="file://$PROJECT_DIR$/api/manager_api/managerlogin_api.yml" />
+    <entry file="file://$PROJECT_DIR$/sendmsg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python38/Lib/os.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4301">
+          <caret line="761" lean-forward="true" selection-start-line="761" selection-end-line="761" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/debugtalk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/login_api/auth/updateDevice_api.yaml" />
+    <entry file="file://$PROJECT_DIR$/api/login_api/auth/accessToken_api.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/login_testcases.yml" />
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpfunc/login_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/login_testcases.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/login_api/auth/loginModule_api.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpfunc/time_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpfunc/header_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#108#122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpfunc/db_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

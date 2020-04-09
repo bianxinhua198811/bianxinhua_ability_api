@@ -1,0 +1,35 @@
+name: 账号登录:/v1/auth/loginModule
+base_url: ${ENV(base_url)}
+variables:
+    currtime: ${make_time()}
+    uuid: ${make_uuid()}
+    access_token: ''
+    sign: ${make_sign($currtime, $uuid,$access_token)}
+    phone: ${ENV(twphone)}
+teardown_hooks:
+  - ${teardown_hook_get_authcode($response)}
+request:
+    headers:
+        Content-Type: application/json;charset=utf-8
+        User-Agent: abilityIOSTest/120004 CFNetwork/1121.2.2 Darwin/19.3.0
+        X-MMM-AppName: com.maimaimai.abilityIOS
+        X-MMM-AppProject: ability
+        X-MMM-DeviceType: '0'
+        X-MMM-Sign: $sign
+        X-MMM-Timestamp: $currtime
+        X-MMM-Uuid: $uuid
+        X-MMM-Version: 0.12.0
+    json:
+        clientId: lks3Z8Ncn2j
+        credentials: a7b452dc8082a059807815de1671bf38eb98fa6a3db9685a0bdaf1165189c5a0721df0dd
+        cuid: 3679205371953152
+    method: POST
+    url: /v1/auth/loginModule
+validate:
+-   eq:
+    - content.code
+    - 0
+-   eq:
+    - content.msg
+    - 登录成功
+
